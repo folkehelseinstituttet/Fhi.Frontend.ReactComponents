@@ -1,16 +1,18 @@
 {
-  "name": "fhi.frontend.react-components",
+  "name": "@folkehelseinstituttet/react-components",
   "version": "1.0.0",
   "description": "Frontend components made with react for use in FHI",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
-    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx --source-maps",
+    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps",
     "clean": "rm -rf lib",
     "build": "npm test && npm run eslint && npm run babel",
     "eslint": "npx eslint src --ext .ts --ext .tsx",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "MIT",
@@ -28,8 +30,20 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@folkehelseinstituttet/style": "^3.2.3",
+    "@mdx-js/react": "^2.1.1",
+    "@storybook/addon-actions": "^6.5.0-beta.0",
+    "@storybook/addon-essentials": "^6.5.0-beta.0",
+    "@storybook/addon-interactions": "^6.5.0-beta.0",
+    "@storybook/addon-links": "^6.5.0-beta.0",
+    "@storybook/builder-webpack5": "^6.5.0-beta.0",
+    "@storybook/manager-webpack5": "^6.5.0-beta.0",
+    "@storybook/react": "^6.5.0-beta.0",
+    "@storybook/testing-library": "^0.0.11",
     "@types/jest": "^27.4.1",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-styled-components": "^2.0.7",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
     "eslint": "^8.14.0",
     "eslint-plugin-jest": "^26.1.5",
     "eslint-plugin-react": "^7.29.4",
@@ -37,7 +51,12 @@
     "jest": "^28.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-test-renderer": "^18.1.0"
+    "react-test-renderer": "^18.1.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "styled-components": "^5.3.5"
   },
   "babel": {
     "presets": [
@@ -50,8 +69,9 @@
       "@babel/preset-env",
       "@babel/preset-typescript"
     ],
-    "plugins":[
-      "@babel/plugin-transform-runtime"
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      "babel-plugin-styled-components"
     ]
   }
 }
