@@ -1,0 +1,13 @@
+{
+  "parser": "@babel/eslint-parser",
+  "plugins": ["jest", "react", "react-hooks"],
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+  }
+}

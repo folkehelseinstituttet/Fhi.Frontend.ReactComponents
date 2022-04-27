@@ -1,0 +1,57 @@
+{
+  "name": "fhi.frontend.react-components",
+  "version": "1.0.0",
+  "description": "Frontend components made with react for use in FHI",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch",
+    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx --source-maps",
+    "clean": "rm -rf lib",
+    "build": "npm test && npm run eslint && npm run babel",
+    "eslint": "npx eslint src --ext .ts --ext .tsx",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@folkehelseinstituttet/style": "^3.2.3",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@folkehelseinstituttet/style": "^3.2.3",
+    "@types/jest": "^27.4.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.14.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "jest": "^28.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-test-renderer": "^18.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ],
+    "plugins":[
+      "@babel/plugin-transform-runtime"
+    ]
+  }
+}

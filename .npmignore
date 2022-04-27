@@ -1,0 +1,10 @@
+# Dot files
+.gitignore
+.eslintrc
+
+package.json
+
+# Folders
+src/
+test/
+.storybook/
