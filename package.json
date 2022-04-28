@@ -19,7 +19,8 @@
   "peerDependencies": {
     "@folkehelseinstituttet/style": "^3.2.3",
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",

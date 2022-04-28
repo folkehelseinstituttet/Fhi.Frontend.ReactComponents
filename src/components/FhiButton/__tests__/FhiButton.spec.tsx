@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
-import Button from '../Button';
+import Button from '../FhiButton';
 
-describe('Button', () => {
+describe('FhiButton', () => {
   test('snapshot test', () => {
     const button = renderer.create(<Button text="test" onClick={() => {}} />);
     const tree = button.toJSON();
