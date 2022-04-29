@@ -1,6 +1,6 @@
 {
   "name": "@folkehelseinstituttet/react-components",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Frontend components made with react for use in FHI",
   "main": "dist/index.js",
   "scripts": {
