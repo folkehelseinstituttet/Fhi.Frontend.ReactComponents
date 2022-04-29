@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import FhiTable from './FhiTable';
 
 export default {
-  title: 'Fhi/Table',
+  title: 'Fhi/FhiTable',
   component: FhiTable,
   argTypes: { onNavigate: { action: 'clicked' } },
 } as ComponentMeta<typeof FhiTable>;
@@ -25,18 +25,45 @@ const defaultArgs = {
     },
     {
       key: 3,
-      link: '/Link/to/3',
-      data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+      data: ['Testdata1 linje1', 'Testdata2 linje1'],
     },
     {
       key: 4,
-      link: '/Link/to/4',
-      data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+      data: ['Testdata1 linje2', 'Testdata2 linje2'],
     },
   ],
 };
 
+const clickyData = [
+  {
+    key: 1,
+    link: '/Link/to/1',
+    data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+  },
+  {
+    key: 2,
+    link: '/Link/to/2',
+    data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+  },
+  {
+    key: 3,
+    link: '/Link/to/2',
+    data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+  },
+  {
+    key: 4,
+    link: '/Link/to/2',
+    data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+  },
+];
+
 export const Normal = Template.bind({});
 Normal.args = {
   ...defaultArgs,
+};
+
+export const Clicky = Template.bind({});
+Clicky.args = {
+  ...defaultArgs,
+  data: clickyData,
 };

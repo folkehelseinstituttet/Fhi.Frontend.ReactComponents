@@ -11,14 +11,14 @@ type Props = {
 
 const TabellRad = styled.tr`
     &:nth-child(even) {
-    background: ${({ theme }) => theme.fhiTableSecondary}; 
+    background: ${({ theme }) => theme.fhiGreyLight2}; 
   }
 `;
 
 const KlikkbarTabellRad = styled(TabellRad)`
   cursor: pointer;
   &:hover {
-    background-color: ${({ theme }) => theme.fhiBlueGrey2};
+    background-color: ${({ theme }) => theme.fhiBlueGrey1};
   }
 `;
 

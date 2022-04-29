@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import FhiDetails from './FhiDetails';
 
 export default {
-  title: 'Fhi/Details',
+  title: 'Fhi/FhiDetails',
   component: FhiDetails,
 } as ComponentMeta<typeof FhiDetails>;
 
