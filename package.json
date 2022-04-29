@@ -2,13 +2,14 @@
   "name": "@folkehelseinstituttet/react-components",
   "version": "1.0.0",
   "description": "Frontend components made with react for use in FHI",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "npm run storybook",
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
-    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps --copy-files --no-copy-ignored",
-    "clean": "rm -rf lib",
-    "build": "npm test && npm run eslint && npm run babel",
+    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d dist src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps --copy-files --no-copy-ignored",
+    "clean": "rm -rf dist",
+    "build": "npm test && npm run eslint && npm run generateThemeVariables && npm run babel",
     "generateThemeVariables": "node src/components/FhiTheme/FhiVariableGenerator.ts > src/components/FhiTheme/FhiThemeVariables.json",
     "eslint": "npx eslint src --ext .ts --ext .tsx",
     "prepublish": "npm run build",
@@ -55,7 +56,6 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.0",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "i": "^0.3.7",
     "jest": "^28.0.1",
     "lodash.camelcase": "^4.3.0",
     "node-sass": "^7.0.1",
@@ -68,6 +68,7 @@
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "tslib": "^2.4.0"
   }
 }

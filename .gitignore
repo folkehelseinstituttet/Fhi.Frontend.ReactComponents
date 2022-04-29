@@ -1,5 +1,5 @@
 # Ignore build
-lib/
+dist/
 
 # Other stuff
 node_modules
