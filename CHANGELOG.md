@@ -4,7 +4,10 @@
 > Apr 27, 2022
 
 * :boom: **Breaking** Created `@folkehelseinstituttet/react-components`
-* :nut_and_bolt: **New** Added `Button` to package
+* :nut_and_bolt: **New** Added `FhiButton` to package
+* :nut_and_bolt: **New** Added `FhiTable` to package
+* :nut_and_bolt: **New** Added `FhiDetails` to package
+* :nut_and_bolt: **New** Added `FhiTheme` to package
 
 ## Examples
 

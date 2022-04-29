@@ -3,7 +3,7 @@ import Details from '../FhiDetails';
 
 describe('FhiDetails', () => {
   test('snapshot test', () => {
-    const button = renderer.create(
+    const details = renderer.create(
       <Details
         className="test"
         items={[
@@ -14,7 +14,7 @@ describe('FhiDetails', () => {
         ]}
       />,
     );
-    const tree = button.toJSON();
+    const tree = details.toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FhiDetails snapshot test 1`] = `
+<table
+  className="table table-borderless w-100"
+>
+  <thead>
+    <tr>
+      <th>
+        Header1
+      </th>
+      <th>
+        Header2
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="FhiTable__TabellRad-sc-wflrh6-0 iliSsu"
+    >
+      <td>
+        Testdata11
+      </td>
+      <td>
+        Testdata12
+      </td>
+    </tr>
+    <tr
+      className="FhiTable__TabellRad-sc-wflrh6-0 iliSsu"
+    >
+      <td>
+        Testdata21
+      </td>
+      <td>
+        Testdata22
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
