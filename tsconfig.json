@@ -23,7 +23,8 @@
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true
+		"importHelpers": true,
+		"resolveJsonModule": true
 	},
 	"parserOptions": {
         "createDefaultProgram": true

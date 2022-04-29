@@ -6,10 +6,9 @@
   "scripts": {
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
-    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps",
+    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d lib src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps --copy-files --no-copy-ignored",
     "clean": "rm -rf lib",
     "build": "npm test && npm run eslint && npm run babel",
-    "buildStyle": "npx babel --extensions .ts,.tsx -d lib src/components/FhiTheme --ignore **/*.test.tsx,**/*.stories.tsx --source-maps",
     "generateThemeVariables": "node src/components/FhiTheme/FhiVariableGenerator.ts > src/components/FhiTheme/FhiThemeVariables.json",
     "eslint": "npx eslint src --ext .ts --ext .tsx",
     "prepublish": "npm run build",
@@ -70,21 +69,5 @@
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.5"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-react",
-        {
-          "runtime": "automatic"
-        }
-      ],
-      "@babel/preset-env",
-      "@babel/preset-typescript"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime",
-      "babel-plugin-styled-components"
-    ]
   }
 }
