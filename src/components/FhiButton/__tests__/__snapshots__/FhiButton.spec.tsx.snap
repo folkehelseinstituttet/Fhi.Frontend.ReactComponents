@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button snapshot test 1`] = `
+exports[`FhiButton snapshot test 1`] = `
 <button
-  className="btn fhi-btn-primary"
+  className=" btn fhi-btn-primary"
   onClick={[Function]}
   type="button"
 >

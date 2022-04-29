@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button from './Button';
+import Button from './FhiButton';
 
 // 👇 This default export determines where your story goes in the story list
 export default {
