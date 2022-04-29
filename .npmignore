@@ -1,0 +1,12 @@
+# Dot files
+.gitignore
+.eslintrc
+
+package.json
+
+FhiVariableGenerator.*
+
+# Folders
+src/
+test/
+.storybook/

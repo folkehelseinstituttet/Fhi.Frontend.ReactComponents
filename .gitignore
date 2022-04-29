@@ -1,0 +1,12 @@
+# Ignore build
+dist/
+
+# Other stuff
+node_modules
+*.log
+.DS_Store
+*.tgz
+
+npm-debug*
+
+/.idea
