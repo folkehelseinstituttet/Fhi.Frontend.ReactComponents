@@ -20,9 +20,23 @@
   "license": "MIT",
   "peerDependencies": {
     "@folkehelseinstituttet/style": "^3.2.3",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "react": ">=18",
     "react-dom": ">=18",
+    "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5"
+  },
+  "peerDependenciesMeta": {
+    "react-router-dom": {
+      "optional": true
+    },
+    "@fortawesome/fontawesome-svg-core": {
+      "optional": true
+    },
+    "@fortawesome/react-fontawesome": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -32,6 +46,10 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@folkehelseinstituttet/style": "^3.2.3",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@mdx-js/react": "^2.1.1",
     "@storybook/addon-actions": "^6.5.0-beta.0",
     "@storybook/addon-essentials": "^6.5.0-beta.0",
@@ -63,6 +81,7 @@
     "npm": "^8.8.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-test-renderer": "^18.1.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.51.0",
