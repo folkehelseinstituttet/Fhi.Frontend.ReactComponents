@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import FhiHeader from './FhiHeader';
 
-import fhiLogo from '../assets/logo-norsk-kun-forkortelse-svart-uten-luft-rundt.svg';
+import fhiLogo from './assets/logo-norsk-kun-forkortelse-svart-uten-luft-rundt.svg';
 
 export default {
   title: 'Fhi/FhiHeader',
