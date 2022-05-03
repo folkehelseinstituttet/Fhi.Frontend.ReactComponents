@@ -1,4 +1,10 @@
 
+## Unreleased
+
+> May 03, 2022
+
+* :tada: **Enhancement** Added disabled-option to `FhiButton`
+
 ## 0.1.0
 
 > Apr 29, 2022

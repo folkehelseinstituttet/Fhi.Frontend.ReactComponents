@@ -7,10 +7,11 @@ type Props = {
   secondary?: boolean,
   outline?: boolean,
   className?: string,
+  disabled?: boolean,
 };
 
 const FhiButton: FC<Props> = ({
-  text, size = undefined, secondary, outline, onClick, className,
+  text, size, secondary, outline, onClick, className, disabled,
 }) => {
   let btnClass = `${className} btn`;
   if (size === 'small') {
@@ -35,7 +36,7 @@ const FhiButton: FC<Props> = ({
     btnClass += '-primary';
   }
 
-  return <button type="button" className={btnClass} onClick={onClick}>{text}</button>;
+  return <button type="button" className={btnClass} onClick={onClick} disabled={disabled}>{text}</button>;
 };
 
 FhiButton.defaultProps = {
@@ -43,6 +44,7 @@ FhiButton.defaultProps = {
   secondary: false,
   outline: false,
   className: '',
+  disabled: false,
 };
 
 export default FhiButton;
