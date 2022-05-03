@@ -3,18 +3,20 @@
   "version": "0.2.0",
   "description": "Frontend components made with react for use in FHI",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "start": "npm run storybook",
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
     "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx,.svg,.snap -d dist src --copy-files --no-copy-ignored --ignore **/*.stories.tsx,**/__tests__,**/*.svg --source-maps",
     "clean": "rm -rf dist",
-    "build": "npm test && npm run eslint && npm run generateThemeVariables && npm run babel",
+    "build": "npm test && npm run eslint && npm run generateThemeVariables && npm run babel && npm run build:types",
     "generateThemeVariables": "node src/components/FhiTheme/FhiVariableGenerator.ts > src/components/FhiTheme/FhiThemeVariables.json",
     "eslint": "npx eslint src --ext .ts --ext .tsx",
     "prepack": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:types": "tsc --p tsconfig.release.json"
   },
   "author": "",
   "license": "MIT",

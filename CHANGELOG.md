@@ -1,4 +1,12 @@
 
+
+## Unreleased
+
+> May 03, 2022
+
+* :nut_and_bolt: **New** Added Typescript definitions
+
+
 ## 0.2.0
 
 > May 03, 2022
