@@ -14,6 +14,7 @@
 * :nut_and_bolt: **New** Added `FhiTable` to package
 * :nut_and_bolt: **New** Added `FhiDetails` to package
 * :nut_and_bolt: **New** Added `FhiTheme` to package
+* :nut_and_bolt: **New** Added `FhiHeader` to package
 
 ## Examples
 
