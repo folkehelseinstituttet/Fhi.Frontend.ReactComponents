@@ -25,7 +25,7 @@ Normal.args = {
     { name: 'Menu item 4', routerLink: '/4' },
   ],
   faIcons: {
-    bars: faBars,
-    times: faTimes,
+    menu: faBars,
+    close: faTimes,
   },
 };

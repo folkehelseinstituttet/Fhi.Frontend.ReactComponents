@@ -10,8 +10,8 @@ export type FhiMainMenuProps = {
   }[],
   logo: string,
   faIcons: {
-    bars: IconDefinition,
-    times: IconDefinition,
+    menu: IconDefinition,
+    close: IconDefinition,
   }
 };
 
@@ -41,7 +41,7 @@ const FhiMainMenu:FC<FhiMainMenuProps> = ({ menuItems, logo, faIcons }) => {
               aria-expanded={isOpen}
               onClick={mainMenuToggle}
             >
-              <FontAwesomeIcon icon={isOpen ? faIcons.times : faIcons.bars} />
+              <FontAwesomeIcon icon={isOpen ? faIcons.close : faIcons.menu} />
               <span className="fhi-main-menu__toggler-text">{ !isOpen ? 'Meny' : 'Lukk meny' }</span>
             </button>
             <div className={`collapse fhi-main-menu__collapse${isOpen ? ' show' : ''}`}>

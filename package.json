@@ -7,7 +7,7 @@
     "start": "npm run storybook",
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
-    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx -d dist src --ignore **/*.test.tsx,**/*.stories.tsx --source-maps --copy-files --no-copy-ignored",
+    "babel": "npm run clean && cross-env NODE_ENV=production npx babel --extensions .ts,.tsx,.svg,.snap -d dist src --copy-files --no-copy-ignored --ignore **/*.stories.tsx,**/__tests__,**/*.svg --source-maps",
     "clean": "rm -rf dist",
     "build": "npm test && npm run eslint && npm run generateThemeVariables && npm run babel",
     "generateThemeVariables": "node src/components/FhiTheme/FhiVariableGenerator.ts > src/components/FhiTheme/FhiThemeVariables.json",

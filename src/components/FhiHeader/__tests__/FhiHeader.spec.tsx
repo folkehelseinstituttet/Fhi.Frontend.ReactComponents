@@ -18,8 +18,8 @@ describe('FhiHeader', () => {
             },
           ]}
           faIcons={{
-            bars: faBars,
-            times: faTimes,
+            menu: faBars,
+            close: faTimes,
           }}
         />
       </MemoryRouter>,

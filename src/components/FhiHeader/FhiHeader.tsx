@@ -13,8 +13,8 @@ type FhiHeaderProps = {
   }[],
   logo: string,
   faIcons: {
-    bars: IconDefinition,
-    times: IconDefinition,
+    menu: IconDefinition,
+    close: IconDefinition,
   }
 };
 
