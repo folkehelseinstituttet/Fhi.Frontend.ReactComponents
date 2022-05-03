@@ -11,7 +11,7 @@ type Props = {
 };
 
 const FhiButton: FC<Props> = ({
-  text, size = undefined, secondary, outline, onClick, className, disabled,
+  text, size, secondary, outline, onClick, className, disabled,
 }) => {
   let btnClass = `${className} btn`;
   if (size === 'small') {
