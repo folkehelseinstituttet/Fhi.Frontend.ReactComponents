@@ -20,12 +20,12 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  text: 'Knapp',
+  children: 'Knapp',
 };
 
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-  text: 'Knapp',
+  children: 'Knapp',
   secondary: true,
 };
