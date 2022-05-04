@@ -3,7 +3,7 @@ import Button from '../FhiButton';
 
 describe('FhiButton', () => {
   test('snapshot test', () => {
-    const button = renderer.create(<Button text="test" onClick={() => {}} />);
+    const button = renderer.create(<Button onClick={() => {}}>test</Button>);
     const tree = button.toJSON();
     expect(tree).toMatchSnapshot();
   });

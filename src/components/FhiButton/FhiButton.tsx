@@ -1,17 +1,25 @@
 import { FC } from 'react';
 
 type Props = {
-  text: string,
+  children: React.ReactNode,
   onClick: () => void,
   size?: 'small' | 'medium' | 'large',
   secondary?: boolean,
   outline?: boolean,
   className?: string,
   disabled?: boolean,
+  type?: 'submit' | 'button';
 };
 
 const FhiButton: FC<Props> = ({
-  text, size, secondary, outline, onClick, className, disabled,
+  children,
+  size,
+  secondary,
+  outline,
+  onClick,
+  className,
+  disabled,
+  type,
 }) => {
   let btnClass = `${className} btn`;
   if (size === 'small') {
@@ -36,7 +44,12 @@ const FhiButton: FC<Props> = ({
     btnClass += '-primary';
   }
 
-  return <button type="button" className={btnClass} onClick={onClick} disabled={disabled}>{text}</button>;
+  return (
+    // eslint-disable-next-line react/button-has-type
+    <button type={type} className={btnClass} onClick={onClick} disabled={disabled}>
+      {children}
+    </button>
+  );
 };
 
 FhiButton.defaultProps = {
@@ -45,6 +58,7 @@ FhiButton.defaultProps = {
   outline: false,
   className: '',
   disabled: false,
+  type: 'button',
 };
 
 export default FhiButton;
