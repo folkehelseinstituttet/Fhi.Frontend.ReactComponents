@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 import FhiMainMenu from './FhiMainMenu';
@@ -12,20 +13,28 @@ type FhiHeaderProps = {
     routerLink: string,
   }[],
   logo: string,
+  logoLight: string,
   faIcons: {
     menu: IconDefinition,
     close: IconDefinition,
   }
 };
 
+const PaddingHeader = styled.header`
+background-color: ${({ theme, backgroundColor }) => backgroundColor || theme.fhiWhite};
+  margin-bottom: 0;
+  padding-bottom: 2.5rem;
+`;
+
 const FhiHeader:FC<FhiHeaderProps> = ({
   projectName,
   menuItems,
   className,
   logo,
+  logoLight,
   faIcons,
 }) => (
-  <header className={`fhi-app__header ${className}`}>
+  <PaddingHeader className={`fhi-app__header ${className}`}>
     <div className="fhi-app__brand">
       <div className="container fhi-app__brand-container">
         <div className="fhi-app__brand-content">
@@ -40,10 +49,10 @@ const FhiHeader:FC<FhiHeaderProps> = ({
     </div>
     <FhiMainMenu
       menuItems={menuItems}
-      logo={logo}
+      logo={logoLight}
       faIcons={faIcons}
     />
-  </header>
+  </PaddingHeader>
 );
 
 FhiHeader.defaultProps = {

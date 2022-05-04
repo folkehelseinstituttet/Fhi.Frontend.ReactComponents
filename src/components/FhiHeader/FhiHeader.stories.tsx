@@ -6,6 +6,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import FhiHeader from './FhiHeader';
 
 import fhiLogo from './assets/logo-norsk-kun-forkortelse-svart-uten-luft-rundt.svg';
+import fhiLogoLight from './assets/logo-norsk-kun-forkortelse-hvit-uten-luft-rundt.svg';
 
 export default {
   title: 'Fhi/FhiHeader',
@@ -18,6 +19,7 @@ export const Normal = Template.bind({});
 Normal.args = {
   projectName: 'Fhi React components',
   logo: fhiLogo,
+  logoLight: fhiLogoLight,
   menuItems: [
     { name: 'Menu item 1', routerLink: '/1' },
     { name: 'Menu item 2', routerLink: '/2' },
