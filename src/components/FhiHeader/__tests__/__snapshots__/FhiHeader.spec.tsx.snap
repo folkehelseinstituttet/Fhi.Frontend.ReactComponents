@@ -2,7 +2,7 @@
 
 exports[`FhiHeader snapshot test 1`] = `
 <header
-  className="fhi-app__header test"
+  className="FhiHeader__PaddingHeader-sc-zidcyl-0 fTJlLy fhi-app__header test"
 >
   <div
     className="fhi-app__brand"
@@ -55,7 +55,7 @@ exports[`FhiHeader snapshot test 1`] = `
             <img
               alt="FHI-logo"
               className="fhi-main-menu__home-link-img"
-              src="../assets/logo-norsk-kun-forkortelse-svart-uten-luft-rundt.svg"
+              src="../assets/logo-norsk-kun-forkortelse-hvit-uten-luft-rundt.svg"
             />
           </a>
           <button
