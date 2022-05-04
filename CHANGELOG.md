@@ -9,6 +9,7 @@
 * :tada: **Enhancement** Added prop for iconLight in `FhiHeader`
 * :tada: **Enhancement** Fixed margin/padding bottom on `FhiHeader`
 * :nut_and_bolt: **New** Added `FhiTabBar`
+* :nut_and_bolt: **New** Added `FhiAccordion`
 
 
 ## 0.3.0
