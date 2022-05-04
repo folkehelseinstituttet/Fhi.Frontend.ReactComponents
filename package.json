@@ -16,7 +16,8 @@
     "prepack": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build:types": "tsc --p tsconfig.release.json"
+    "build:types": "tsc --p tsconfig.release.json",
+    "build-local": "npm run babel && npm run build:types"
   },
   "author": "",
   "license": "MIT",

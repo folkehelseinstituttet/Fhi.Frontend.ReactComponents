@@ -1,4 +1,8 @@
+## Unreleased
 
+> May 04, 2022
+
+* :tada: **Enhancement** Added option to set sumbit-type to `FhiButton`
 
 ## 0.3.0
 
