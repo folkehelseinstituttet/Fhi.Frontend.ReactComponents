@@ -4,6 +4,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import styled from 'styled-components';
 import FhiToast from './FhiToast';
+import FhiToastProvider, { useToast } from './FhiToastProvider';
 
 export default {
   title: 'Fhi/FhiToast',
@@ -25,10 +26,31 @@ const Template: ComponentStory<typeof FhiToast> = (args) => (
   </ToastWrapper>
 );
 
+const ToastButton = (args) => {
+  const { addToast } = useToast();
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        addToast(args);
+        addToast(args);
+        addToast(args);
+      }}
+    >
+      Create toast
+    </button>
+  );
+};
+
+const InteractiveTemplate: ComponentStory<typeof FhiToast> = (args) => (
+  <FhiToastProvider>
+    <ToastButton {...args} />
+  </FhiToastProvider>
+);
+
 const defaultArgs = {
   id: 1,
   text: 'This is a toast',
-  removeToast: (x) => x,
 };
 
 export const Success = Template.bind({});
@@ -58,4 +80,11 @@ export const LongText = Template.bind({});
 LongText.args = {
   ...defaultArgs,
   text: 'Ipsum dolor amet turkey andouille sausage tri-tip swine. Filet mignon fatback biltong kevin turkey, porchetta buffalo chicken. Burgdoggen tongue meatball venison. Pig turducken beef ribeye short loin, shank andouille ham pork doner jowl salami sirloin kielbasa meatball.',
+};
+
+export const Interactive = InteractiveTemplate.bind({});
+Interactive.args = {
+  text: 'This is a toast triggered from a button',
+  type: 'success',
+  delay: 5000,
 };

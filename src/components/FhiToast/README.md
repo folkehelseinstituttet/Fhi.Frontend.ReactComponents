@@ -31,7 +31,7 @@ const Component = () => {
   const { addToast } = useFhiToast();
   
   return (
-    <button onClick={addToast({type: 'success', text: 'Button was clicked!'})}>ClickMe</button>
+    <button onClick={ () => addToast({type: 'success', text: 'Button was clicked!'})}>ClickMe</button>
   )
 };
 

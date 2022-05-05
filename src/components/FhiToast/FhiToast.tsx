@@ -38,22 +38,20 @@ const CloseButton = styled.button`
 `;
 
 type FhiToastProps = {
-  id: number,
   text: string,
   type?: 'success' | 'warning' | 'error',
   delay?: number,
-  removeToast: (id: number) => void,
+  removeToast: () => void,
 };
 
 const FhiToast:FC<FhiToastProps> = ({
-  id,
   text,
   type,
   delay,
   removeToast,
 }) => (
   <MarginToast
-    onClose={() => removeToast(id)}
+    onClose={removeToast}
     delay={delay}
     autohide
   >
@@ -61,7 +59,7 @@ const FhiToast:FC<FhiToastProps> = ({
       type={type}
     >
       {text}
-      <CloseButton type="button" className="btn-close ml-2 mb-1" data-dismiss="toast">
+      <CloseButton type="button" className="btn-close ml-2 mb-1" onClick={removeToast}>
         <span aria-hidden="true">×</span>
         <span className="sr-only">Close</span>
       </CloseButton>

@@ -11,23 +11,35 @@ const ToastWrapper = styled.div`
   z-index: 1;
 `;
 
-export type ToastProps = {
+export type ToastWrapperProps = {
   id: number,
   content: {
     text: string,
     type?: 'success' | 'warning' | 'error',
+    delay?: number,
   },
 };
 
+export type ToastProps = {
+  text: string,
+  type?: 'success' | 'warning' | 'error',
+  delay?: number,
+};
+
 type ToastContainerProps = {
-  toasts: ToastProps[],
+  toasts: ToastWrapperProps[],
   removeToast: (id: number) => void,
 };
 
 const ToastContainer: FC<ToastContainerProps> = ({ toasts, removeToast }) => (
   <ToastWrapper>
     {toasts.map(({ id, content }) => (
-      <Toast key={id} id={id} type={content.type} text={content.text} removeToast={removeToast} />
+      <Toast
+        key={id}
+        type={content.type}
+        text={content.text}
+        removeToast={() => removeToast(id)}
+      />
     ))}
   </ToastWrapper>
 );

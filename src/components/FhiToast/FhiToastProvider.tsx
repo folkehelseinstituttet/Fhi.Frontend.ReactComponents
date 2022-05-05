@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, {
   FC,
@@ -5,7 +6,7 @@ import React, {
   useContext,
   useCallback,
 } from 'react';
-import ToastContainer, { ToastProps } from './FhiToastContainer';
+import ToastContainer, { ToastProps, ToastWrapperProps } from './FhiToastContainer';
 
 const ToastContext = React.createContext<{
   addToast:(content: ToastProps) => void,
@@ -22,18 +23,17 @@ type ToastProviderProps = {
 };
 
 const ToastProvider:FC<ToastProviderProps> = ({ children }) => {
-  const [toasts, setToasts] = useState<ToastProps[] | []>([]);
+  const [toasts, setToasts] = useState<ToastWrapperProps[] | []>([]);
 
   const addToast = useCallback(
     (content) => {
       setToasts((toastList) => [
         ...toastList,
         {
-          id: nextId,
+          id: nextId++,
           content,
         },
       ]);
-      nextId += 1;
     },
     [setToasts],
   );
