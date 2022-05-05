@@ -10,6 +10,7 @@
 * :tada: **Enhancement** Fixed margin/padding bottom on `FhiHeader`
 * :nut_and_bolt: **New** Added `FhiTabBar`
 * :nut_and_bolt: **New** Added `FhiAccordion`
+* :nut_and_bolt: **New** Added [`FhiToast`](./src/components/FhiToast/README.md)
 
 
 ## 0.3.0
