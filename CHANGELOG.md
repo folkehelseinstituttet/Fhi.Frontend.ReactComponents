@@ -1,11 +1,11 @@
 
 
-## 1.0.1
+## 1.1.0
 
-> May 10, 2022
+> May 12, 2022
 
 * :tada: **Enhancement** OnClick is now optional on `FhiButton`
-* :tada: **Enhancement** Added onOpen optional function on items in `FhiAccordion`
+* :nut_and_bolt: **New** Added onOpen optional function on items in `FhiAccordion`
 
 ## 1.0.0
 
