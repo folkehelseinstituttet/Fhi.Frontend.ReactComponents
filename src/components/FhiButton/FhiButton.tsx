@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 type Props = {
   children: React.ReactNode,
-  onClick: () => void,
+  onClick?: () => void,
   size?: 'small' | 'medium' | 'large',
   secondary?: boolean,
   outline?: boolean,
@@ -59,6 +59,7 @@ FhiButton.defaultProps = {
   className: '',
   disabled: false,
   type: 'button',
+  onClick: () => {},
 };
 
 export default FhiButton;

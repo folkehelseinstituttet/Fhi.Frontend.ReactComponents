@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-props-no-spreading */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { useState } from 'react';
 
 import Button from './FhiButton';
 
@@ -29,3 +30,27 @@ Secondary.args = {
   children: 'Knapp',
   secondary: true,
 };
+
+const OnClickTemplate = ({ ...args }) => {
+  const [clicks, setClicks] = useState(0);
+
+  const handleOnClick = () => {
+    const numberOfClicks = clicks + 1;
+    setClicks(numberOfClicks);
+  };
+
+  return (
+    <>
+      <Button {...args} onClick={handleOnClick}>Click me</Button>
+      <p>
+        Button clicked
+        {' '}
+        {clicks}
+        {' '}
+        times
+      </p>
+    </>
+  );
+};
+
+export const OnClick = OnClickTemplate.bind({});
