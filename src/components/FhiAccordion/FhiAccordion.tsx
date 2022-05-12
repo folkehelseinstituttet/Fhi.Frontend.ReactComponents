@@ -16,6 +16,7 @@ type FhiAccordionProps = {
     id: string,
     header: ReactNode,
     content: ReactElement,
+    onOpen?: (eventKey: string) => void,
   }[],
   arrowIcon: IconDefinition,
   className?: string,
@@ -60,16 +61,22 @@ const AccordionToggleIcon = styled(FontAwesomeIcon)`
 type AccordionToggleButtonProps = {
   eventKey: string,
   icon: IconDefinition,
-  callback?: (eventKey: string)=>{},
+  onOpen?: (eventKey: string)=> void,
 };
 
-const AccordionToggleButton:FC<AccordionToggleButtonProps> = ({ eventKey, icon, callback }) => {
+const AccordionToggleButton:FC<AccordionToggleButtonProps> = ({
+  eventKey,
+  icon,
+  onOpen,
+}) => {
   const { activeEventKey } = useContext(AccordionContext);
+
+  const isOpen = activeEventKey === eventKey;
+
   const decoratedOnClick = useAccordionButton(
     eventKey,
-    () => callback && callback(eventKey),
+    () => (!isOpen && onOpen && onOpen(eventKey)),
   );
-  const isOpen = activeEventKey === eventKey;
   return (
     <AccordionToggle onClick={decoratedOnClick}>
       {isOpen}
@@ -79,16 +86,20 @@ const AccordionToggleButton:FC<AccordionToggleButtonProps> = ({ eventKey, icon, 
 };
 
 AccordionToggleButton.defaultProps = {
-  callback: undefined, // This gets set by react-bootstrap sp no need to set it to anything
+  onOpen: () => {},
 };
 
 const FhiAccordion:FC<FhiAccordionProps> = ({ items, arrowIcon, className }) => (
   <AccordionContainer className={className}>
     <Accordion>
       {items.map((item) => (
-        <AccordionPanel key={item.id} eventKey={item.id}>
+        <AccordionPanel key={item.id}>
           <AccordionHeader>
-            <AccordionToggleButton eventKey={item.id} icon={arrowIcon} />
+            <AccordionToggleButton
+              eventKey={item.id}
+              icon={arrowIcon}
+              onOpen={item.onOpen}
+            />
             {item.header}
           </AccordionHeader>
           <Accordion.Collapse eventKey={item.id}>

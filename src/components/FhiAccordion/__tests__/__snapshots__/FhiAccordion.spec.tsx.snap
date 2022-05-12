@@ -9,7 +9,6 @@ exports[`FhiAccordion snapshot test 1`] = `
   >
     <div
       className="FhiAccordion__AccordionPanel-sc-zatlfg-1 jRTNRB card"
-      eventKey="1"
     >
       <div
         className="FhiAccordion__AccordionHeader-sc-zatlfg-2 ejpjqn card-header"
@@ -53,7 +52,6 @@ exports[`FhiAccordion snapshot test 1`] = `
     </div>
     <div
       className="FhiAccordion__AccordionPanel-sc-zatlfg-1 jRTNRB card"
-      eventKey="2"
     >
       <div
         className="FhiAccordion__AccordionHeader-sc-zatlfg-2 ejpjqn card-header"
