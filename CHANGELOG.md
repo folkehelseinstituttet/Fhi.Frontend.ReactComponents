@@ -1,8 +1,10 @@
 ## Unreleased
 
-> May 13, 2022
+> May 25, 2022
 
 * :tada: **Enhancement** Added repository in package.json
+* :nut_and_bolt: **New** Added `apiClient`
+* :nut_and_bolt: **New** Added `useApi` hook
 
 ## 1.1.0
 
