@@ -1,3 +1,7 @@
+## Unreleased
+
+* :tada: **Enhancement** Updated dependencies
+
 ## 1.2.0
 
 > May 25, 2022
