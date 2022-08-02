@@ -1,3 +1,9 @@
+## Unreleased
+
+> Aug 08, 2022
+
+* :nut_and_bolt: **New** Added delete-functions to 'apiClient'
+
 ## 1.2.1
 
 > Aug 01, 2022

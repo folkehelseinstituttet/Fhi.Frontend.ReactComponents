@@ -80,10 +80,23 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
     return response.json();
   };
 
+  const deleteRaw = async (url: string, options?: RequestInit) => {
+    const response = await fetch(rootUrl + url, { ...defaultOptions, ...options, method: 'DELETE' });
+    await throwIfErrors(response);
+    return response;
+  };
+
+  const httpDelete = async (url: string, options?: RequestInit) => {
+    const response = await deleteRaw(url, options);
+    return response.json();
+  };
+
   return {
     get,
+    delete: httpDelete,
     post,
     put,
+    deleteRaw,
     getRaw,
     postRaw,
     putRaw,
