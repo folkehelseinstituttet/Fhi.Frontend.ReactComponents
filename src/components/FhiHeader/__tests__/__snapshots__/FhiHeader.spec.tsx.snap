@@ -2,32 +2,36 @@
 
 exports[`FhiHeader snapshot test 1`] = `
 <header
-  className="FhiHeader__PaddingHeader-sc-zidcyl-0 dLwaaV fhi-app__header test"
+  className="fhi-header test"
 >
   <div
-    className="fhi-app__brand"
+    className="fhi-header__brand"
   >
     <div
-      className="container fhi-app__brand-container"
+      className="container fhi-header__brand-container"
     >
       <div
-        className="fhi-app__brand-content"
+        className="fhi-header__brand-content"
       >
         <a
-          className="fhi-app__logo"
+          className="fhi-header__logo"
           href="/"
           onClick={[Function]}
         >
-          <img
-            alt="FHI-logo"
-            src="../assets/logo-norsk-kun-forkortelse-svart-uten-luft-rundt.svg"
+          <i
+            className="icon-fhi-logo fhi-header__logo-icon"
           />
+          <span
+            className="visually-hidden"
+          >
+            Testproject
+          </span>
         </a>
         <div
-          className="fhi-app__project"
+          className="fhi-header__project"
         >
           <span
-            className="fhi-app__project-name"
+            className="fhi-header__project-name"
           >
             Testproject
           </span>
@@ -36,84 +40,68 @@ exports[`FhiHeader snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="fhi-app__main-menu"
+    className="container fhi-header__main-menu-container"
   >
-    <div
-      className="container fhi-app__main-menu-container"
+    <nav
+      className="fhi-main-menu "
     >
-      <nav
-        className="fhi-main-menu"
+      <div
+        className="container fhi-main-menu__container"
       >
-        <div
-          className="container fhi-main-menu__container"
+        <a
+          className="fhi-main-menu__home-link"
+          href="/"
+          onClick={[Function]}
         >
-          <a
-            className="fhi-main-menu__home-link"
-            href="/"
-            onClick={[Function]}
+          <i
+            className="icon-fhi-logo fhi-header__logo-icon fhi-main-menu__logo-icon"
+          />
+          <span
+            className="visually-hidden"
           >
-            <img
-              alt="FHI-logo"
-              className="fhi-main-menu__home-link-img"
-              src="../assets/logo-norsk-kun-forkortelse-hvit-uten-luft-rundt.svg"
-            />
-          </a>
-          <button
-            aria-controls="fhi-main-menu"
-            aria-expanded={false}
-            className=" fhi-main-menu__toggler"
-            onClick={[Function]}
-            type="button"
+            FHI Produktnavn
+          </span>
+        </a>
+        <button
+          aria-controls="fhi-main-menu"
+          aria-expanded={false}
+          className="fhi-main-menu__toggler"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="icon-xmark fhi-main-menu__toggler-close-icon"
+          />
+          <i
+            className="icon-list fhi-main-menu__toggler-menu-icon"
+          />
+          <span
+            className="fhi-main-menu__toggler-text"
           >
-            <svg
-              aria-hidden="true"
-              className="svg-inline--fa fa-bars "
-              data-icon="bars"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              style={{}}
-              viewBox="0 0 448 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                fill="currentColor"
-                style={{}}
-              />
-            </svg>
-            <span
-              className="fhi-main-menu__toggler-text"
-            >
-              Meny
-            </span>
-          </button>
-          <div
-            className="collapse fhi-main-menu__collapse"
+            Meny
+          </span>
+        </button>
+        <div
+          className="collapse fhi-main-menu__collapse "
+        >
+          <ul
+            className="nav nav-tabs fhi-nav-tabs fhi-main-menu__nav"
           >
-            <ul
-              className="nav flex-column flex-xl-row fhi-main-menu__nav"
+            <li
+              className="fhi-main-menu__nav-item"
             >
-              <li
-                className="nav-item"
+              <a
+                className="nav-link fhi-main-menu__nav-link"
+                href="/rl"
+                onClick={[Function]}
               >
-                <a
-                  className="nav-link fhi-main-menu__nav-link"
-                  href="/rl"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="fhi-main-menu__nav-link-text"
-                  >
-                    Dette er en tittel
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                Dette er en tittel
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </div>
 </header>
 `;

@@ -40,7 +40,7 @@ const FhiMainMenu:FC<FhiMainMenuProps> = ({ menuItems }) => {
           <div className={`collapse fhi-main-menu__collapse ${isOpen ? 'show' : ''}`}>
             <ul className="nav nav-tabs fhi-nav-tabs fhi-main-menu__nav">
               {menuItems.map((link) => (
-                <li className="fhi-main-menu__nav-item">
+                <li className="fhi-main-menu__nav-item" key={link.routerLink}>
                   <NavLink
                     to={link.routerLink}
                     onClick={mainMenuClose}

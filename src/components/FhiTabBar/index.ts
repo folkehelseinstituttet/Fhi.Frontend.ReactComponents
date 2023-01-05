@@ -1,1 +1,4 @@
-export { default } from './FhiTabBar';
+/**
+ * @deprecated FHITabBar has been renamed to FhiTabs
+ */
+export { default } from '../FhiTabs';

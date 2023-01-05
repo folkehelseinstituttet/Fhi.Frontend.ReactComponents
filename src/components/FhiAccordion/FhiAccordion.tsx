@@ -24,7 +24,7 @@ const FhiAccordion:FC<FhiAccordionProps> = ({
   <div className={className}>
     <Accordion flush={flush || alternate} className={`${className} ${alternate ? 'fhi-accordion-flush' : ''}`}>
       {items.map((item) => (
-        <Accordion.Item eventKey={item.id}>
+        <Accordion.Item key={item.id} eventKey={item.id}>
           <Accordion.Header>
             {item.header}
           </Accordion.Header>

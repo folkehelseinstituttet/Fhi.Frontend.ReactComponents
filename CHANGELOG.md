@@ -8,6 +8,8 @@
 * :boom: **Breaking** Updated design on `FhiAccordion`
 * :tada: **Enhancement** Removed `arrowIcon` prop from `FhiAccordion`
 * :nut_and_bolt: **New** Added `flush` and `alternate` variations to `FhiAccordion`
+* :nut_and_bolt: **New** Added `FhiTabs` with new design
+* :boom: **Breaking** Replaced `FhiTabBar` with `FhiTabs`
 
 ## 1.3.0
 
