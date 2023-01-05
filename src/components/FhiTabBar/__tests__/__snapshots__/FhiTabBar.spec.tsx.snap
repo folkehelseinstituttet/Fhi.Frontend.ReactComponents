@@ -2,7 +2,7 @@
 
 exports[`FhiTabBar snapshot test 1`] = `
 <div
-  className="FhiTabBar__NavContainer-sc-2nj45d-2 iQGNEY test"
+  className="FhiTabBar__NavContainer-sc-2nj45d-2 dhyNbv test"
 >
   <div
     className="container"
@@ -14,11 +14,11 @@ exports[`FhiTabBar snapshot test 1`] = `
         className="col-12"
       >
         <ul
-          className="FhiTabBar__NavList-sc-2nj45d-1 jEWuBQ nav nav-tabs"
+          className="FhiTabBar__NavList-sc-2nj45d-1 gQnIJP nav nav-tabs"
           onKeyDown={[Function]}
         >
           <a
-            className="FhiTabBar__TabBarLink-sc-2nj45d-0 hNrwuR nav-link"
+            className="FhiTabBar__TabBarLink-sc-2nj45d-0 cVQuXe nav-link"
             data-rr-ui-event-key={null}
             disabled={false}
             href="/1"
@@ -31,7 +31,7 @@ exports[`FhiTabBar snapshot test 1`] = `
             </div>
           </a>
           <a
-            className="FhiTabBar__TabBarLink-sc-2nj45d-0 hNrwuR nav-link"
+            className="FhiTabBar__TabBarLink-sc-2nj45d-0 cVQuXe nav-link"
             data-rr-ui-event-key={null}
             disabled={false}
             href="/2"
@@ -44,7 +44,7 @@ exports[`FhiTabBar snapshot test 1`] = `
             </div>
           </a>
           <a
-            className="FhiTabBar__TabBarLink-sc-2nj45d-0 hNrwuR nav-link"
+            className="FhiTabBar__TabBarLink-sc-2nj45d-0 cVQuXe nav-link"
             data-rr-ui-event-key={null}
             disabled={false}
             href="/3"

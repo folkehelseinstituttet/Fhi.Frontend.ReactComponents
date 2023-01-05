@@ -4,15 +4,15 @@ exports[`FhiToast snapshot test 1`] = `
 <div
   aria-atomic="true"
   aria-live="assertive"
-  className="fade toast FhiToast__MarginToast-sc-10dpyte-0 gCxjPv show"
+  className="fade toast FhiToast__MarginToast-sc-10dpyte-0 gNylEY show"
   role="alert"
 >
   <div
-    className="FhiToast__ToastBody-sc-10dpyte-1 NfMJL toast-body"
+    className="FhiToast__ToastBody-sc-10dpyte-1 eIEpqY toast-body"
   >
     This is a toast!
     <button
-      className="FhiToast__CloseButton-sc-10dpyte-2 hARZvN btn-close ml-2 mb-1"
+      className="FhiToast__CloseButton-sc-10dpyte-2 xLxey btn-close ml-2 mb-1"
       onClick={[Function]}
       type="button"
     >
