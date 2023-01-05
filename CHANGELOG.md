@@ -1,3 +1,13 @@
+## 2.0.0
+
+> Jan 09, 2022
+
+* :tada: **Enhancement** Updated all dependencies
+* :boom: **Breaking** Updated design on `FhiHeader`
+* :tada: **Enhancement** Removed `logo`, `logoLight` and `faIcons` props from FhiHeader
+
+
+
 ## 1.3.0
 
 > Aug 02, 2022
