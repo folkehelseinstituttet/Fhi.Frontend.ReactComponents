@@ -4,9 +4,10 @@
 
 * :tada: **Enhancement** Updated all dependencies
 * :boom: **Breaking** Updated design on `FhiHeader`
-* :tada: **Enhancement** Removed `logo`, `logoLight` and `faIcons` props from FhiHeader
-
-
+* :tada: **Enhancement** Removed `logo`, `logoLight` and `faIcons` props from `FhiHeader`
+* :boom: **Breaking** Updated design on `FhiAccordion`
+* :tada: **Enhancement** Removed `arrowIcon` prop from `FhiAccordion`
+* :nut_and_bolt: **New** Added `flush` and `alternate` variations to `FhiAccordion`
 
 ## 1.3.0
 
