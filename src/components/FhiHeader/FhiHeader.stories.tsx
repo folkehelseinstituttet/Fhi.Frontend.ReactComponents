@@ -4,7 +4,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import FhiHeader from './FhiHeader';
 
-
 export default {
   title: 'Fhi/FhiHeader',
   component: FhiHeader,
