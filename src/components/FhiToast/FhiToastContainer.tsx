@@ -14,6 +14,7 @@ const ToastWrapper = styled.div`
 export type ToastWrapperProps = {
   id: number,
   content: {
+    title?: string,
     text: string,
     type?: 'success' | 'warning' | 'error',
     delay?: number,
@@ -21,6 +22,7 @@ export type ToastWrapperProps = {
 };
 
 export type ToastProps = {
+  title?: string,
   text: string,
   type?: 'success' | 'warning' | 'error',
   delay?: number,
@@ -36,8 +38,10 @@ const ToastContainer: FC<ToastContainerProps> = ({ toasts, removeToast }) => (
     {toasts.map(({ id, content }) => (
       <Toast
         key={id}
+        title={content.title}
         type={content.type}
         text={content.text}
+        delay={content.delay}
         removeToast={() => removeToast(id)}
       />
     ))}

@@ -8,25 +8,23 @@ exports[`FhiToast snapshot test 1`] = `
   role="alert"
 >
   <div
-    className="FhiToast__ToastBody-sc-10dpyte-1 eIEpqY toast-body"
+    className="toast-header"
   >
-    This is a toast!
+    <strong
+      className="me-auto"
+    />
     <button
-      className="FhiToast__CloseButton-sc-10dpyte-2 xLxey btn-close ml-2 mb-1"
+      aria-label="Close"
+      className="btn-close"
+      data-dismiss="toast"
       onClick={[Function]}
       type="button"
-    >
-      <span
-        aria-hidden="true"
-      >
-        ×
-      </span>
-      <span
-        className="sr-only"
-      >
-        Close
-      </span>
-    </button>
+    />
+  </div>
+  <div
+    className="toast-body"
+  >
+    This is a toast!
   </div>
 </div>
 `;
