@@ -23,7 +23,7 @@ const FhiTabs:FC<FhiTabsProps> = ({ links, className }) => (
 );
 
 FhiTabs.defaultProps = {
-  className: '',
+  className: 'mb-7', // Setting margin bottom 7 as default making it easy to override if nessesary
 };
 
 export default FhiTabs;

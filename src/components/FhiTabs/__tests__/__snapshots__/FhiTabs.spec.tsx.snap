@@ -2,7 +2,7 @@
 
 exports[`FhiTabs snapshot test 1`] = `
 <div
-  className="nav nav-tabs"
+  className="mb-7 nav nav-tabs"
   onKeyDown={[Function]}
 >
   <div

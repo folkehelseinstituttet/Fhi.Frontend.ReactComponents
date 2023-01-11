@@ -21,20 +21,18 @@ const FhiAccordion:FC<FhiAccordionProps> = ({
   flush,
   alternate,
 }) => (
-  <div className={className}>
-    <Accordion flush={flush || alternate} className={`${className} ${alternate ? 'fhi-accordion-flush' : ''}`}>
-      {items.map((item) => (
-        <Accordion.Item key={item.id} eventKey={item.id}>
-          <Accordion.Header>
-            {item.header}
-          </Accordion.Header>
-          <Accordion.Body>
-            {item.content}
-          </Accordion.Body>
-        </Accordion.Item>
-      ))}
-    </Accordion>
-  </div>
+  <Accordion flush={flush || alternate} className={`${className} ${alternate ? 'fhi-accordion-flush' : ''}`}>
+    {items.map((item) => (
+      <Accordion.Item key={item.id} eventKey={item.id}>
+        <Accordion.Header>
+          {item.header}
+        </Accordion.Header>
+        <Accordion.Body>
+          {item.content}
+        </Accordion.Body>
+      </Accordion.Item>
+    ))}
+  </Accordion>
 );
 
 FhiAccordion.defaultProps = {
