@@ -2,46 +2,31 @@
 
 exports[`FhiAccordion snapshot test 1`] = `
 <div
-  className="FhiAccordion__AccordionContainer-sc-zatlfg-0 test"
+  className="test  accordion"
 >
   <div
-    className="accordion"
+    className="accordion-item"
   >
-    <div
-      className="FhiAccordion__AccordionPanel-sc-zatlfg-1 jRTNRB card"
+    <h2
+      className="accordion-header"
     >
-      <div
-        className="FhiAccordion__AccordionHeader-sc-zatlfg-2 ejpjqn card-header"
+      <button
+        aria-expanded={false}
+        className="accordion-button collapsed"
+        onClick={[Function]}
+        type="button"
       >
-        <button
-          className="FhiAccordion__AccordionToggle-sc-zatlfg-3 ejPUoy"
-          onClick={[Function]}
-        >
-          <svg
-            aria-hidden="true"
-            className="svg-inline--fa fa-angle-down FhiAccordion__AccordionToggleIcon-sc-zatlfg-4 fIMSbP fhi-accordion__panel__toggle-icon"
-            data-icon="angle-down"
-            data-prefix="fas"
-            focusable="false"
-            role="img"
-            style={Object {}}
-            viewBox="0 0 384 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
-              fill="currentColor"
-              style={Object {}}
-            />
-          </svg>
-        </button>
         <h4>
           Dette er en ustylet overskrift
         </h4>
-      </div>
+      </button>
+    </h2>
+    <div
+      aria-expanded={null}
+      className="accordion-collapse collapse"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="accordion-body"
       >
         <div>
           <span>
@@ -50,41 +35,30 @@ exports[`FhiAccordion snapshot test 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="FhiAccordion__AccordionPanel-sc-zatlfg-1 jRTNRB card"
+  </div>
+  <div
+    className="accordion-item"
+  >
+    <h2
+      className="accordion-header"
     >
-      <div
-        className="FhiAccordion__AccordionHeader-sc-zatlfg-2 ejpjqn card-header"
+      <button
+        aria-expanded={false}
+        className="accordion-button collapsed"
+        onClick={[Function]}
+        type="button"
       >
-        <button
-          className="FhiAccordion__AccordionToggle-sc-zatlfg-3 ejPUoy"
-          onClick={[Function]}
-        >
-          <svg
-            aria-hidden="true"
-            className="svg-inline--fa fa-angle-down FhiAccordion__AccordionToggleIcon-sc-zatlfg-4 fIMSbP fhi-accordion__panel__toggle-icon"
-            data-icon="angle-down"
-            data-prefix="fas"
-            focusable="false"
-            role="img"
-            style={Object {}}
-            viewBox="0 0 384 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
-              fill="currentColor"
-              style={Object {}}
-            />
-          </svg>
-        </button>
         <h4>
           Dette er en ustylet overskrift
         </h4>
-      </div>
+      </button>
+    </h2>
+    <div
+      aria-expanded={null}
+      className="accordion-collapse collapse"
+    >
       <div
-        aria-expanded={null}
-        className="accordion-collapse collapse"
+        className="accordion-body"
       >
         <div>
           <span>

@@ -1,4 +1,3 @@
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import renderer from 'react-test-renderer';
 import Accordion from '../FhiAccordion';
 
@@ -18,7 +17,6 @@ const defaultArgs = {
       content: <DefaultContent />,
     },
   ],
-  arrowIcon: faAngleDown,
   className: 'Testclass',
 };
 
@@ -28,7 +26,6 @@ describe('FhiAccordion', () => {
       <Accordion
         className="test"
         items={defaultArgs.items}
-        arrowIcon={defaultArgs.arrowIcon}
       />,
     );
     const tree = accordion.toJSON();
