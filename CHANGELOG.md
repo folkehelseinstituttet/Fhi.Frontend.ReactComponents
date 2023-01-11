@@ -1,6 +1,6 @@
 ## 2.0.0
 
-> Jan 11, 2022
+> Jan 11, 2023
 
 * :tada: **Enhancement** Updated all dependencies
 * :boom: **Breaking** Updated design on `FhiHeader`
