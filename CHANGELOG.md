@@ -1,3 +1,21 @@
+## 2.0.0
+
+> Jan 09, 2022
+
+* :tada: **Enhancement** Updated all dependencies
+* :boom: **Breaking** Updated design on `FhiHeader`
+* :tada: **Enhancement** Removed `logo`, `logoLight` and `faIcons` props from `FhiHeader`
+* :boom: **Breaking** Updated design on `FhiAccordion`
+* :tada: **Enhancement** Removed `arrowIcon` prop from `FhiAccordion`
+* :nut_and_bolt: **New** Added `flush` and `alternate` variations to `FhiAccordion`
+* :nut_and_bolt: **New** Added `FhiTabs` with new design
+* :boom: **Breaking** Replaced `FhiTabBar` with `FhiTabs`
+* :boom: **Breaking** Updated design on `FhiToast`
+* :nut_and_bolt: **New** Added `title` to `FhiToast`
+* :bug: **Bugfix** Fixed delay for `FhiToast` (Added option for 0 delay that makes toast stay until closed by user)
+
+
+
 ## 1.3.0
 
 > Aug 02, 2022

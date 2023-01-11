@@ -32,12 +32,20 @@ const ToastButton = (args) => {
     <button
       type="button"
       onClick={() => {
-        addToast(args);
-        addToast(args);
-        addToast(args);
+        addToast({ ...args, delay: 2000 });
+        addToast({ ...args, title: 'Success', type: 'success' });
+        addToast({ ...args, title: 'Warning', type: 'warning' });
+        addToast({ ...args, title: 'Error', type: 'error' });
+        addToast({
+          ...args,
+          delay: 0,
+          title: 'Error',
+          text: 'This toast will not disappear',
+          type: 'error',
+        });
       }}
     >
-      Create toast
+      Create toasts
     </button>
   );
 };
@@ -85,6 +93,5 @@ LongText.args = {
 export const Interactive = InteractiveTemplate.bind({});
 Interactive.args = {
   text: 'This is a toast triggered from a button',
-  type: 'success',
   delay: 5000,
 };

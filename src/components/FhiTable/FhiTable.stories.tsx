@@ -25,11 +25,11 @@ const defaultArgs = {
     },
     {
       key: 3,
-      data: ['Testdata1 linje1', 'Testdata2 linje1'],
+      data: ['Testdata1 linje3', 'Testdata2 linje3'],
     },
     {
       key: 4,
-      data: ['Testdata1 linje2', 'Testdata2 linje2'],
+      data: [<b>Testdata1 linje4 (Med bold)</b>, 'Testdata2 linje4'],
     },
   ],
 };
@@ -53,7 +53,7 @@ const clickyData = [
   {
     key: 4,
     link: '/Link/to/2',
-    data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
+    data: [<b>Clicky rad felt 1 (Med bold tekst)</b>, 'Clicky rad felt 2'],
   },
 ];
 

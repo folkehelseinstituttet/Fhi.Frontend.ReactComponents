@@ -16,7 +16,7 @@ exports[`FhiDetails snapshot test 1`] = `
   </thead>
   <tbody>
     <tr
-      className="FhiTable__TabellRad-sc-wflrh6-0 iliSsu"
+      className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
     >
       <td>
         Testdata11
@@ -26,7 +26,7 @@ exports[`FhiDetails snapshot test 1`] = `
       </td>
     </tr>
     <tr
-      className="FhiTable__TabellRad-sc-wflrh6-0 iliSsu"
+      className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
     >
       <td>
         Testdata21
