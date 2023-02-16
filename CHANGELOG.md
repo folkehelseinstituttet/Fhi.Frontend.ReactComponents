@@ -1,3 +1,10 @@
+## 3.0.0
+
+> Feb 16, 2023
+* :boom: **Breaking** updated to `@folkehelseinstituttet/style` v4 [Changelog](https://github.com/folkehelseinstituttet/Fhi.Frontend.Style/blob/main/CHANGELOG.md#400)
+* :bug: **Bugfix** Fixed Accordion item `onOpen` function that broke in V2.0.0
+
+
 ## 2.0.0
 
 > Jan 11, 2023
