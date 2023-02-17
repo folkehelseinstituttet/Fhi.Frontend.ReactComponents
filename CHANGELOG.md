@@ -1,9 +1,10 @@
 ## 3.0.0
 
-> Feb 16, 2023
-* :boom: **Breaking** updated to `@folkehelseinstituttet/style` v4 [Changelog](https://github.com/folkehelseinstituttet/Fhi.Frontend.Style/blob/main/CHANGELOG.md#400)
-* :bug: **Bugfix** Fixed Accordion item `onOpen` function that broke in V2.0.0
+> Feb 17, 2023
 
+* :boom: **Breaking** updated to `@folkehelseinstituttet/style` v4 [Changelog](https://github.com/folkehelseinstituttet/Fhi.Frontend.Style/blob/main/CHANGELOG.md#400)
+* :boom: **Breaking** Removed JS friendly Theme variables as variables in `@folkehelseinstituttet/style` where renamed and moved in new version. If you are using `FhiTheme` today, you will have to replace it with your own object that contains the variables you are using in the your project
+* :bug: **Bugfix** Fixed Accordion item `onOpen` function that broke in V2.0.0
 
 ## 2.0.0
 

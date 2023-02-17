@@ -1,12 +1,10 @@
 import '@folkehelseinstituttet/style/scss/style.scss';
 import { ThemeProvider } from "styled-components";
 import { MemoryRouter } from "react-router";
-import FhiTheme from '../src/components/FhiTheme';
-
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={FhiTheme}>
+    <ThemeProvider theme={{}}>
       <Story />
     </ThemeProvider>
   ),
