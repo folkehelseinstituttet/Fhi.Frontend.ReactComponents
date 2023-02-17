@@ -27,7 +27,9 @@ const FhiAccordion:FC<FhiAccordionProps> = ({
         <Accordion.Header>
           {item.header}
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body
+          onEnter={() => item.onOpen && item.onOpen(item.id)}
+        >
           {item.content}
         </Accordion.Body>
       </Accordion.Item>
