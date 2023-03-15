@@ -1,40 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiDetails snapshot test 1`] = `
-<table
-  className="table table-borderless w-100"
+<div
+  className="test table-responsive"
 >
-  <thead>
-    <tr>
-      <th>
-        Header1
-      </th>
-      <th>
-        Header2
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-      className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
-    >
-      <td>
-        Testdata11
-      </td>
-      <td>
-        Testdata12
-      </td>
-    </tr>
-    <tr
-      className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
-    >
-      <td>
-        Testdata21
-      </td>
-      <td>
-        Testdata22
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table
+    className="table  table-striped "
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Header1
+        </th>
+        <th
+          scope="col"
+        >
+          Header2
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        aria-selected={false}
+        className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
+      >
+        <td>
+          Testdata11
+        </td>
+        <td>
+          Testdata12
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
+      >
+        <td>
+          Testdata21
+        </td>
+        <td>
+          Testdata22
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
