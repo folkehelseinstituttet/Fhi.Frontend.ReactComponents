@@ -17,18 +17,22 @@ const defaultArgs = {
   data: [
     {
       key: 1,
+      selected: false,
       data: ['Testdata1 linje1', 'Testdata2 linje1'],
     },
     {
       key: 2,
+      selected: false,
       data: ['Testdata1 linje2', 'Testdata2 linje2'],
     },
     {
       key: 3,
+      selected: false,
       data: ['Testdata1 linje3', 'Testdata2 linje3'],
     },
     {
       key: 4,
+      selected: false,
       data: [<b>Testdata1 linje4 (Med bold)</b>, 'Testdata2 linje4'],
     },
   ],
@@ -62,8 +66,15 @@ Normal.args = {
   ...defaultArgs,
 };
 
+export const Compact = Template.bind({});
+Compact.args = {
+  ...defaultArgs,
+  compact: true,
+};
+
 export const Clicky = Template.bind({});
 Clicky.args = {
   ...defaultArgs,
   data: clickyData,
+  hover: true,
 };

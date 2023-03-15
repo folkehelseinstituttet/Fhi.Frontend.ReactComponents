@@ -1,25 +1,31 @@
 import { FC } from 'react';
 
 type Props = {
+  className?: string,
   children: React.ReactNode,
   onClick?: () => void,
-  size?: 'small' | 'medium' | 'large',
-  secondary?: boolean,
-  outline?: boolean,
-  className?: string,
   disabled?: boolean,
   type?: 'submit' | 'button';
+  size?: 'small' | 'medium' | 'large',
+  secondary?: boolean,
+  outline?: boolean, // Deprecated: Removed from style so replaced by secondary
+  flat?: boolean,
+  icon?: boolean,
+  spinner?: boolean,
 };
 
 const FhiButton: FC<Props> = ({
+  className,
   children,
+  onClick,
+  disabled,
+  type,
   size,
   secondary,
   outline,
-  onClick,
-  className,
-  disabled,
-  type,
+  flat,
+  icon,
+  spinner,
 }) => {
   let btnClass = `${className} btn`;
   if (size === 'small') {
@@ -32,21 +38,20 @@ const FhiButton: FC<Props> = ({
     btnClass += ' btn-lg';
   }
 
-  if (outline) {
-    btnClass += ' fhi-btn-outline';
+  if (secondary || outline) {
+    btnClass += ' fhi-btn-secondary';
+  } else if (flat) {
+    btnClass += ' fhi-btn-flat';
+  } else if (icon) {
+    btnClass += ' fhi-btn-icon';
   } else {
-    btnClass += ' fhi-btn';
-  }
-
-  if (secondary) {
-    btnClass += '-secondary';
-  } else {
-    btnClass += '-primary';
+    btnClass += ' fhi-btn-primary';
   }
 
   return (
     // eslint-disable-next-line react/button-has-type
     <button type={type} className={btnClass} onClick={onClick} disabled={disabled}>
+      {spinner && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />}
       {children}
     </button>
   );
@@ -58,6 +63,9 @@ FhiButton.defaultProps = {
   outline: false,
   className: '',
   disabled: false,
+  flat: false,
+  icon: false,
+  spinner: false,
   type: 'button',
   onClick: () => {},
 };

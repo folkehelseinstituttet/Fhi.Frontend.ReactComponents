@@ -4,9 +4,13 @@ import styled from 'styled-components';
 import { TableStructure } from './FhiTable.model';
 
 type Props = {
+  className?: string,
   headers: string[],
   data: TableStructure[],
-  onNavigate: (link: string)=>{},
+  onNavigate?: (link: string) => {} | undefined,
+  compact?: boolean,
+  striped?: boolean,
+  hover?: boolean,
 };
 
 const TabellRad = styled.tr`
@@ -22,43 +26,62 @@ const KlikkbarTabellRad = styled(TabellRad)`
   }
 `;
 
-const FhiTable: FC<Props> = ({ data, headers, onNavigate }) => (
-  <table className="table table-borderless w-100">
-    <thead>
-      <tr>
-        {headers.map((t) => (
-          <th key={t}>{t}</th>
+const FhiTable: FC<Props> = ({
+  className,
+  data,
+  headers,
+  onNavigate,
+  compact,
+  striped,
+  hover,
+}) => (
+  <div className={`${className} table-responsive`}>
+    <table className={`table ${compact ? 'table-sm' : ''} ${striped ? 'table-striped' : ''} ${hover ? 'table-hover' : ''}`}>
+      <thead>
+        <tr>
+          {headers.map((t) => (
+            <th key={t} scope="col">{t}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((d) => (
+          d.link
+            ? (
+              <KlikkbarTabellRad
+                key={d.key}
+                onClick={() => {
+                  if (d.link && onNavigate) {
+                    onNavigate(d.link);
+                  }
+                }}
+                aria-selected={!!d.selected}
+              >
+                {d.data.map((v, i) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <td key={i}>{v}</td>
+                ))}
+              </KlikkbarTabellRad>
+            ) : (
+              <TabellRad key={d.key} aria-selected={!!d.selected}>
+                {d.data.map((v, i) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <td key={i}>{v}</td>
+                ))}
+              </TabellRad>
+            )
         ))}
-      </tr>
-    </thead>
-    <tbody>
-      {data.map((d) => (
-        d.link
-          ? (
-            <KlikkbarTabellRad
-              key={d.key}
-              onClick={() => {
-                if (d.link) {
-                  onNavigate(d.link);
-                }
-              }}
-            >
-              {d.data.map((v, i) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <td key={i}>{v}</td>
-              ))}
-            </KlikkbarTabellRad>
-          ) : (
-            <TabellRad key={d.key}>
-              {d.data.map((v, i) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <td key={i}>{v}</td>
-              ))}
-            </TabellRad>
-          )
-      ))}
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 );
 
-export default styled(FhiTable)``;
+FhiTable.defaultProps = {
+  className: '',
+  compact: false,
+  hover: false,
+  striped: true,
+  onNavigate: undefined,
+};
+
+export default FhiTable;
