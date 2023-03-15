@@ -7,7 +7,7 @@ type Props = {
   className?: string,
   headers: string[],
   data: TableStructure[],
-  onNavigate: (link: string)=>{},
+  onNavigate?: (link: string) => {} | undefined,
   compact?: boolean,
   striped?: boolean,
   hover?: boolean,
@@ -51,7 +51,7 @@ const FhiTable: FC<Props> = ({
               <KlikkbarTabellRad
                 key={d.key}
                 onClick={() => {
-                  if (d.link) {
+                  if (d.link && onNavigate) {
                     onNavigate(d.link);
                   }
                 }}
@@ -81,6 +81,7 @@ FhiTable.defaultProps = {
   compact: false,
   hover: false,
   striped: true,
+  onNavigate: undefined,
 };
 
 export default FhiTable;
