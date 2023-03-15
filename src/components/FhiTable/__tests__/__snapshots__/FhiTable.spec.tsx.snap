@@ -24,7 +24,6 @@ exports[`FhiDetails snapshot test 1`] = `
     <tbody>
       <tr
         aria-selected={false}
-        className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
       >
         <td>
           Testdata11
@@ -35,7 +34,6 @@ exports[`FhiDetails snapshot test 1`] = `
       </tr>
       <tr
         aria-selected={false}
-        className="FhiTable__TabellRad-sc-wflrh6-0 jeqJIh"
       >
         <td>
           Testdata21

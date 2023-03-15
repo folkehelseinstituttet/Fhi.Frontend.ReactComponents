@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import styled from 'styled-components';
 
 import { TableStructure } from './FhiTable.model';
 
@@ -12,19 +11,6 @@ type Props = {
   striped?: boolean,
   hover?: boolean,
 };
-
-const TabellRad = styled.tr`
-    &:nth-child(even) {
-    background: ${({ theme }) => theme.fhiGreyLight2}; 
-  }
-`;
-
-const KlikkbarTabellRad = styled(TabellRad)`
-  cursor: pointer;
-  &:hover {
-    background-color: ${({ theme }) => theme.fhiBlueGrey1};
-  }
-`;
 
 const FhiTable: FC<Props> = ({
   className,
@@ -45,32 +31,26 @@ const FhiTable: FC<Props> = ({
         </tr>
       </thead>
       <tbody>
-        {data.map((d) => (
-          d.link
-            ? (
-              <KlikkbarTabellRad
-                key={d.key}
-                onClick={() => {
-                  if (d.link && onNavigate) {
-                    onNavigate(d.link);
-                  }
-                }}
-                aria-selected={!!d.selected}
-              >
-                {d.data.map((v, i) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <td key={i}>{v}</td>
-                ))}
-              </KlikkbarTabellRad>
-            ) : (
-              <TabellRad key={d.key} aria-selected={!!d.selected}>
-                {d.data.map((v, i) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <td key={i}>{v}</td>
-                ))}
-              </TabellRad>
-            )
-        ))}
+        {data.map((d) => {
+          const clickProps: any = {};
+          if (d.link && onNavigate) {
+            clickProps.onClick = () => onNavigate(d.link!);
+            clickProps.role = 'button';
+          }
+          return (
+            <tr
+              key={d.key}
+              aria-selected={!!d.selected}
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              {...clickProps}
+            >
+              {d.data.map((v, i) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <td key={i}>{v}</td>
+              ))}
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   </div>
