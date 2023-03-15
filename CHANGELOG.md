@@ -1,3 +1,12 @@
+## 3.1.0
+
+> Mar 15, 2023
+
+* :tada: **Enhancement** Added new optional props to FhiTable: `compact` `striped` `hover`
+* :tada: **Enhancement** Added new optional prop to table elements: `selected`
+* :tada: **Enhancement** Added `flat` and `icon` styles for FhiButton
+* :nut_and_bolt: **New** Added `FhiSpinner`
+
 ## 3.0.0
 
 > Feb 17, 2023
