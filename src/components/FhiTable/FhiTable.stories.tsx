@@ -51,12 +51,12 @@ const clickyData = [
   },
   {
     key: 3,
-    link: '/Link/to/2',
+    link: '/Link/to/3',
     data: ['Clicky rad felt 1', 'Clicky rad felt 2'],
   },
   {
     key: 4,
-    link: '/Link/to/2',
+    link: '/Link/to/4',
     data: [<b>Clicky rad felt 1 (Med bold tekst)</b>, 'Clicky rad felt 2'],
   },
 ];
