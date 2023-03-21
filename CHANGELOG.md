@@ -1,3 +1,10 @@
+## 3.2.0
+
+> Mar 21, 2023
+
+* :tada: **Enhancement** Added new optional prop to FhiTable: `onClick`
+* :bug: **Bugfix** Fixed button onClick type
+
 ## 3.1.0
 
 > Mar 16, 2023

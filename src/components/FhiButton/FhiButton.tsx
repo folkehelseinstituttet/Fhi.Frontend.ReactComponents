@@ -3,7 +3,7 @@ import { FC } from 'react';
 type Props = {
   className?: string,
   children: React.ReactNode,
-  onClick?: () => void,
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
   disabled?: boolean,
   type?: 'submit' | 'button';
   size?: 'small' | 'medium' | 'large',
