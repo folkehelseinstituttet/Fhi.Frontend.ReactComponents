@@ -1,7 +1,9 @@
 ## 3.2.0
 
-> Mar 21, 2023
+> Mar 28, 2023
 
+* :tada: **Enhancement** Added `isRequested` to apiClient to check if Request has been called
+* :tada: **Enhancement** Added `PATCH` to apiClient
 * :tada: **Enhancement** Added new optional prop to FhiTable: `onClick`
 * :bug: **Bugfix** Fixed button onClick type
 
