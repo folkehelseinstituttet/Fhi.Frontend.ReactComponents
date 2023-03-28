@@ -4,9 +4,11 @@ export default (apiFunc) => {
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [isRequested, setIsRequested] = useState<boolean>(false);
 
   const request = async (...args) => {
     setLoading(true);
+    setIsRequested(true);
     try {
       const result = await apiFunc(...args);
       setData(result);
@@ -22,5 +24,6 @@ export default (apiFunc) => {
     error,
     loading,
     request,
+    isRequested,
   };
 };

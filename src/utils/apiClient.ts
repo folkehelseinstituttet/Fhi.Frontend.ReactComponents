@@ -91,14 +91,27 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
     return response.json();
   };
 
+  const patchRaw = async (url: string, options?: RequestInit) => {
+    const response = await fetch(rootUrl + url, { ...defaultOptions, ...options, method: 'PATCH' });
+    await throwIfErrors(response);
+    return response;
+  };
+
+  const patch = async (url: string, options?: RequestInit) => {
+    const response = await patchRaw(url, options);
+    return response.json();
+  };
+
   return {
     get,
     delete: httpDelete,
     post,
     put,
     deleteRaw,
+    patch,
     getRaw,
     postRaw,
     putRaw,
+    patchRaw,
   };
 };
