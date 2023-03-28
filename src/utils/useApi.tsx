@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function useApi<T>(apiFunc) {
-  const [data, setData] = useState<T | any>();
+  const [data, setData] = useState<T | any>(null);
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [isRequested, setIsRequested] = useState<boolean>(false);
