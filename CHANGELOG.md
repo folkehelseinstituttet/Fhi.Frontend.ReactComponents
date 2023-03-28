@@ -2,6 +2,7 @@
 
 > Mar 28, 2023
 
+* :tada: **Enhancement** Added type to `useApi`
 * :tada: **Enhancement** Added `isRequested` to apiClient to check if Request has been called
 * :tada: **Enhancement** Added `PATCH` to apiClient
 * :tada: **Enhancement** Added new optional prop to FhiTable: `onClick`
