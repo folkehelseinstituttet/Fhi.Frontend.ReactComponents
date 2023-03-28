@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export default (apiFunc) => {
-  const [data, setData] = useState<any>(null);
+function useApi<T>(apiFunc) {
+  const [data, setData] = useState<T | any>(null);
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [isRequested, setIsRequested] = useState<boolean>(false);
@@ -26,4 +26,6 @@ export default (apiFunc) => {
     request,
     isRequested,
   };
-};
+}
+
+export default useApi;
