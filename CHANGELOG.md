@@ -5,7 +5,7 @@
 * :tada: **Enhancement** Added type to `useApi`
 * :tada: **Enhancement** Added `isRequested` to apiClient to check if Request has been called
 * :tada: **Enhancement** Added `PATCH` to apiClient
-* :tada: **Enhancement** Added new optional prop to FhiTable: `onClick`
+* :tada: **Enhancement** Added new optional prop to FhiTableStructure: `onClick`
 * :bug: **Bugfix** Fixed button onClick type
 
 ## 3.1.0

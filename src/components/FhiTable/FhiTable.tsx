@@ -7,7 +7,6 @@ type Props = {
   headers: string[],
   data: TableStructure[],
   onNavigate?: (link: string) => {} | void | undefined,
-  onClick?: (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void,
   compact?: boolean,
   striped?: boolean,
   hover?: boolean,
@@ -18,7 +17,6 @@ const FhiTable: FC<Props> = ({
   data,
   headers,
   onNavigate,
-  onClick,
   compact,
   striped,
   hover,
@@ -38,8 +36,8 @@ const FhiTable: FC<Props> = ({
           if (d.link && onNavigate) {
             clickProps.onClick = () => onNavigate(d.link!);
             clickProps.role = 'button';
-          } else if (onClick) {
-            clickProps.onClick = onClick;
+          } else if (d.onClick) {
+            clickProps.onClick = d.onClick;
           }
           return (
             <tr
@@ -66,7 +64,6 @@ FhiTable.defaultProps = {
   hover: false,
   striped: true,
   onNavigate: undefined,
-  onClick: undefined,
 };
 
 export default FhiTable;
