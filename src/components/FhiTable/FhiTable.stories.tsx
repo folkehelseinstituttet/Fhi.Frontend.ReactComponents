@@ -1,16 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import FhiTable from './FhiTable';
 
-export default {
-  title: 'Fhi/FhiTable',
+const meta: Meta<typeof FhiTable> = {
   component: FhiTable,
   argTypes: { onNavigate: { action: 'clicked' } },
-} as ComponentMeta<typeof FhiTable>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof FhiTable> = (args) => <FhiTable {...args} />;
+type Story = StoryObj<typeof FhiTable>;
 
 const defaultArgs = {
   headers: ['Header1', 'Header2'],
@@ -61,20 +61,23 @@ const clickyData = [
   },
 ];
 
-export const Normal = Template.bind({});
-Normal.args = {
-  ...defaultArgs,
+export const Normal: Story = {
+  args: {
+    ...defaultArgs,
+  },
 };
 
-export const Compact = Template.bind({});
-Compact.args = {
-  ...defaultArgs,
-  compact: true,
+export const Compact: Story = {
+  args: {
+    ...defaultArgs,
+    compact: true,
+  },
 };
 
-export const Clicky = Template.bind({});
-Clicky.args = {
-  ...defaultArgs,
-  data: clickyData,
-  hover: true,
+export const Clicky: Story = {
+  args: {
+    ...defaultArgs,
+    data: clickyData,
+    hover: true,
+  },
 };
