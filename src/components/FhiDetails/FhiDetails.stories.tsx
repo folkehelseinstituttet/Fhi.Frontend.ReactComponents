@@ -1,15 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import FhiDetails from './FhiDetails';
 
-export default {
-  title: 'Fhi/FhiDetails',
-  component: FhiDetails,
-} as ComponentMeta<typeof FhiDetails>;
+const meta: Meta<typeof FhiDetails> = { component: FhiDetails };
+export default meta;
 
-const Template: ComponentStory<typeof FhiDetails> = (args) => <FhiDetails {...args} />;
+type Story = StoryObj<typeof FhiDetails>;
 
 const defaultArgs = {
   items: [
@@ -33,7 +31,8 @@ const defaultArgs = {
   ],
 };
 
-export const Normal = Template.bind({});
-Normal.args = {
-  items: defaultArgs.items,
+export const Normal: Story = {
+  args: {
+    items: defaultArgs.items,
+  },
 };

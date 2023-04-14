@@ -1,3 +1,10 @@
+## 4.0.0
+
+> Apr 12, 2023
+
+* :boom: **Breaking** updated to `@folkehelseinstituttet/style` v5 [Changelog](https://github.com/folkehelseinstituttet/Fhi.Frontend.Style/blob/main/CHANGELOG.md#500)
+* :tada: **Enhancement** Updated storybook to v7
+
 ## 3.2.0
 
 > Mar 28, 2023
