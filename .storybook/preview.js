@@ -1,4 +1,4 @@
-import '@folkehelseinstituttet/style/scss/style.scss';
+import '@folkehelseinstituttet/style/import/_all.scss';
 import { ThemeProvider } from "styled-components";
 import { MemoryRouter } from "react-router";
 

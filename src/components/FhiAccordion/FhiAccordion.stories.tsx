@@ -1,17 +1,19 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-props-no-spreading */
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import FhiAccordion from './FhiAccordion';
 
-export default {
-  title: 'Fhi/FhiAccordion',
-  component: FhiAccordion,
-} as ComponentMeta<typeof FhiAccordion>;
+const meta: Meta<typeof FhiAccordion> = { component: FhiAccordion };
+export default meta;
 
-const Template: ComponentStory<typeof FhiAccordion> = (args) => <FhiAccordion {...args} />;
+type Story = StoryObj<typeof FhiAccordion>;
 
-const DefaultContent = () => <div><span>Dette er ustylet innhold</span></div>;
+const DefaultContent = () => (
+  <div>
+    <span>Dette er ustylet innhold</span>
+  </div>
+);
 
 const defaultArgs = {
   items: [
@@ -38,19 +40,22 @@ const defaultArgs = {
   ],
 };
 
-export const Normal = Template.bind({});
-Normal.args = {
-  items: defaultArgs.items,
+export const Normal: Story = {
+  args: {
+    items: defaultArgs.items,
+  },
 };
 
-export const Flush = Template.bind({});
-Flush.args = {
-  items: defaultArgs.items,
-  flush: true,
+export const Flush: Story = {
+  args: {
+    items: defaultArgs.items,
+    flush: true,
+  },
 };
 
-export const Alternate = Template.bind({});
-Alternate.args = {
-  items: defaultArgs.items,
-  alternate: true,
+export const Alternate: Story = {
+  args: {
+    items: defaultArgs.items,
+    alternate: true,
+  },
 };
