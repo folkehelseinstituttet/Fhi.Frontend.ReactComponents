@@ -1,3 +1,9 @@
+## 4.0.1
+
+> Oct 9, 2023
+
+* :bug: **Bugfix** useApi now resets data and error before calling. This fixes a bug where the previous data and error was shown while loading new data. 
+
 ## 4.0.0
 
 > Apr 12, 2023

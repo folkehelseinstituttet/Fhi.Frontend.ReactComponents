@@ -9,6 +9,8 @@ function useApi<T>(apiFunc) {
   const request = async (...args) => {
     setLoading(true);
     setIsRequested(true);
+    setError('');
+    setData(null);
     try {
       const result = await apiFunc(...args);
       setData(result);
