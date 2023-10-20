@@ -63,8 +63,7 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
       ...defaultOptions,
       method: 'POST',
     };
-    setBody(body, postOptions);
-    const response = await fetch(rootUrl + url, { ...postOptions, ...options });
+    const response = await fetch(rootUrl + url, { ...setBody(body, postOptions), ...options });
     await throwIfErrors(response);
     return response;
   };
@@ -79,8 +78,7 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
       ...defaultOptions,
       method: 'PUT',
     };
-    setBody(body, putOptions);
-    const response = await fetch(rootUrl + url, { ...putOptions, ...options });
+    const response = await fetch(rootUrl + url, { ...setBody(body, putOptions), ...options });
     await throwIfErrors(response);
     return response;
   };
@@ -106,8 +104,7 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
       ...defaultOptions,
       method: 'PATCH',
     };
-    setBody(body, patchOptions);
-    const response = await fetch(rootUrl + url, { ...patchOptions, ...options });
+    const response = await fetch(rootUrl + url, { ...setBody(body, patchOptions), ...options });
     await throwIfErrors(response);
     return response;
   };
