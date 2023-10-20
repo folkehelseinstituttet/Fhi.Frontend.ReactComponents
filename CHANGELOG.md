@@ -1,8 +1,9 @@
-## unreleased
+## 4.1.0
 
 > Oct 20, 2023
 
 * :nut_and_bolt: **New** Added `FhiSelect`
+* :tada: **Enhancement** Updated packages
 
 ## 4.0.2
 
