@@ -3,10 +3,6 @@ const defaultOptions: RequestInit = {
   mode: 'cors', // no-cors, *cors, same-origin
   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
   credentials: 'include', // include, *same-origin, omit
-  headers: {
-    'Content-Type': 'application/json',
-    // 'Content-Type': 'application/x-www-form-urlencoded',
-  },
   redirect: 'follow', // manual, *follow, error
   // eslint-disable-next-line max-len
   referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
@@ -24,6 +20,20 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
   const errorMappings = {
     ...defaultStatusErrorMapping,
     ...statusErrorMappings,
+  };
+
+  const setBody = (body: object, options: RequestInit) => {
+    if (body instanceof FormData) {
+      return { ...options, body };
+    }
+    return {
+      ...options,
+      headers: {
+        ...options.headers,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    };
   };
 
   const throwIfErrors = async (response) => {
@@ -52,8 +62,8 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
     const postOptions = {
       ...defaultOptions,
       method: 'POST',
-      body: JSON.stringify(body),
     };
+    setBody(body, postOptions);
     const response = await fetch(rootUrl + url, { ...postOptions, ...options });
     await throwIfErrors(response);
     return response;
@@ -68,8 +78,8 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
     const putOptions = {
       ...defaultOptions,
       method: 'PUT',
-      body: JSON.stringify(body),
     };
+    setBody(body, putOptions);
     const response = await fetch(rootUrl + url, { ...putOptions, ...options });
     await throwIfErrors(response);
     return response;
@@ -95,8 +105,8 @@ export default (rootUrl: string = '', statusErrorMappings: any = {}) => {
     const patchOptions = {
       ...defaultOptions,
       method: 'PATCH',
-      body: JSON.stringify(body),
     };
+    setBody(body, patchOptions);
     const response = await fetch(rootUrl + url, { ...patchOptions, ...options });
     await throwIfErrors(response);
     return response;
