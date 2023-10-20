@@ -1,6 +1,6 @@
-## Unreleased
+## 4.0.2
 
-> Oct X, 2023
+> Oct 20, 2023
 
 * :bug: **Bugfix** `apiClient` will no longer stringify FormData.
 * :bug: **Bugfix** Updated packages to remove vulnerabilities.
