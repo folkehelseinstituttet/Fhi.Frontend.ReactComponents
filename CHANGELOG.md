@@ -1,3 +1,9 @@
+## unreleased
+
+> Oct 20, 2023
+
+* :nut_and_bolt: **New** Added `FhiSelect`
+
 ## 4.0.2
 
 > Oct 20, 2023
