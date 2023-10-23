@@ -1,3 +1,9 @@
+## Unreleased
+
+> Oct 23, 2023
+
+* :tada: **Enhancement** Added placeholder to FhiSelect
+
 ## 4.1.0
 
 > Oct 20, 2023
