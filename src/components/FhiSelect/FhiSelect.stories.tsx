@@ -10,7 +10,7 @@ export default meta;
 type Story = StoryObj<typeof Select>;
 
 const SelectTemplate = ({ ...args }) => {
-  const [verdi, setVerdi] = useState('4');
+  const [verdi, setVerdi] = useState(undefined);
 
   const handleOnChange = (v) => setVerdi(v);
 
@@ -19,6 +19,7 @@ const SelectTemplate = ({ ...args }) => {
       id={args.id}
       label={args.label}
       options={args.options}
+      placeholder="Please choose"
       value={verdi}
       onChange={handleOnChange}
     />

@@ -6,10 +6,12 @@ type SelectProps = {
   value: any;
   className?: string;
   onChange: (value: any) => void;
+  placeholder?: string;
   options: {
     id: string;
     text: string;
     value: any;
+    disabled?: boolean;
   }[]
 };
 
@@ -20,6 +22,7 @@ const FhiSelect: FC<SelectProps> = ({
   onChange,
   className,
   options,
+  placeholder,
 }) => {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     onChange(event.target.value);
@@ -33,9 +36,21 @@ const FhiSelect: FC<SelectProps> = ({
         id={id}
         value={value}
         onChange={handleChange}
+        placeholder={placeholder}
       >
+        {placeholder && (
+          <option selected disabled>
+            {placeholder}
+          </option>
+        )}
         {options.map((option) => (
-          <option key={option.id} value={option.value}>{option.text}</option>
+          <option
+            key={option.id}
+            value={option.value}
+            disabled={option.disabled}
+          >
+            {option.text}
+          </option>
         ))}
       </select>
     </div>
@@ -44,6 +59,7 @@ const FhiSelect: FC<SelectProps> = ({
 
 FhiSelect.defaultProps = {
   className: '',
+  placeholder: undefined,
 };
 
 export default FhiSelect;
