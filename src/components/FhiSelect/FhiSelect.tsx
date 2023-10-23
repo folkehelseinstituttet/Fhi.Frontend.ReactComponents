@@ -36,10 +36,10 @@ const FhiSelect: FC<SelectProps> = ({
         id={id}
         value={value}
         onChange={handleChange}
-        placeholder={placeholder}
+        defaultValue={placeholder ? 'PLACEHOLDER' : undefined}
       >
         {placeholder && (
-          <option selected disabled>
+          <option value="PLACEHOLDER" disabled hidden>
             {placeholder}
           </option>
         )}
