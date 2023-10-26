@@ -1,6 +1,6 @@
-## 4.2.0
+## 4.2.1
 
-> Oct 23, 2023
+> Oct 26, 2023
 
 * :bug: **Bugfix** Fixed placeholder in FhiSelect
 
