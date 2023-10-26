@@ -1,3 +1,9 @@
+## Unreleased
+
+> Oct 23, 2023
+
+* :bug: **Bugfix** Fixed placeholder in FhiSelect
+
 ## 4.2.0
 
 > Oct 23, 2023

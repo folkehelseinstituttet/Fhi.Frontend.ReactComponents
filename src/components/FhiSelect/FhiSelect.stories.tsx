@@ -15,14 +15,18 @@ const SelectTemplate = ({ ...args }) => {
   const handleOnChange = (v) => setVerdi(v);
 
   return (
-    <Select
-      id={args.id}
-      label={args.label}
-      options={args.options}
-      placeholder="Please choose"
-      value={verdi}
-      onChange={handleOnChange}
-    />
+    <>
+      <Select
+        id={args.id}
+        label={args.label}
+        options={args.options}
+        placeholder="Please choose"
+        value={verdi}
+        onChange={handleOnChange}
+      />
+      <button type="button" onClick={() => setVerdi(undefined)}>reset</button>
+      {verdi}
+    </>
   );
 };
 

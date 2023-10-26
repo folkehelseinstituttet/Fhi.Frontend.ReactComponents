@@ -34,9 +34,8 @@ const FhiSelect: FC<SelectProps> = ({
       <select
         className="form-select"
         id={id}
-        value={value}
+        value={value === undefined && placeholder ? 'PLACEHOLDER' : value}
         onChange={handleChange}
-        defaultValue={placeholder ? 'PLACEHOLDER' : undefined}
       >
         {placeholder && (
           <option value="PLACEHOLDER" disabled hidden>
