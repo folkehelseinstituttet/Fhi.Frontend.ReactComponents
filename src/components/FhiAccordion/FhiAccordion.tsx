@@ -17,9 +17,9 @@ type FhiAccordionProps = {
 
 const FhiAccordion:FC<FhiAccordionProps> = ({
   items,
-  className,
-  flush,
-  alternate,
+  className = '',
+  flush = false,
+  alternate = false,
 }) => (
   <Accordion flush={flush || alternate} className={`${className} ${alternate ? 'fhi-accordion-flush' : ''}`}>
     {items.map((item) => (
@@ -36,11 +36,5 @@ const FhiAccordion:FC<FhiAccordionProps> = ({
     ))}
   </Accordion>
 );
-
-FhiAccordion.defaultProps = {
-  className: '',
-  flush: false,
-  alternate: false,
-};
 
 export default FhiAccordion;

@@ -20,9 +20,9 @@ const FhiSelect: FC<SelectProps> = ({
   label,
   value,
   onChange,
-  className,
+  className = '',
   options,
-  placeholder,
+  placeholder = undefined,
 }) => {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     onChange(event.target.value);
@@ -54,11 +54,6 @@ const FhiSelect: FC<SelectProps> = ({
       </select>
     </div>
   );
-};
-
-FhiSelect.defaultProps = {
-  className: '',
-  placeholder: undefined,
 };
 
 export default FhiSelect;

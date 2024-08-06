@@ -13,13 +13,13 @@ type Props = {
 };
 
 const FhiTable: FC<Props> = ({
-  className,
+  className = '',
   data,
   headers,
-  onNavigate,
-  compact,
-  striped,
-  hover,
+  onNavigate = undefined,
+  compact = false,
+  striped = true,
+  hover = false,
 }) => (
   <div className={`${className} table-responsive`}>
     <table className={`table ${compact ? 'table-sm' : ''} ${striped ? 'table-striped' : ''} ${hover ? 'table-hover' : ''}`}>
@@ -57,13 +57,5 @@ const FhiTable: FC<Props> = ({
     </table>
   </div>
 );
-
-FhiTable.defaultProps = {
-  className: '',
-  compact: false,
-  hover: false,
-  striped: true,
-  onNavigate: undefined,
-};
 
 export default FhiTable;

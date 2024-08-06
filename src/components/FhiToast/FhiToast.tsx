@@ -15,10 +15,10 @@ type FhiToastProps = {
 };
 
 const FhiToast:FC<FhiToastProps> = ({
-  title,
+  title = undefined,
   text,
-  type,
-  delay,
+  type = undefined,
+  delay = 5000,
   removeToast,
 }) => (
   <MarginToast
@@ -35,11 +35,5 @@ const FhiToast:FC<FhiToastProps> = ({
     </Toast.Body>
   </MarginToast>
 );
-
-FhiToast.defaultProps = {
-  type: undefined,
-  title: undefined,
-  delay: 5000,
-};
 
 export default FhiToast;
