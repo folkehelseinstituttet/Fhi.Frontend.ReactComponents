@@ -15,7 +15,7 @@ type FhiHeaderProps = {
 const FhiHeader:FC<FhiHeaderProps> = ({
   projectName,
   menuItems,
-  className,
+  className = '',
 }) => (
   <header className={`fhi-header ${className}`}>
     <div className="fhi-header__brand">
@@ -34,9 +34,5 @@ const FhiHeader:FC<FhiHeaderProps> = ({
     <FhiMainMenu menuItems={menuItems} />
   </header>
 );
-
-FhiHeader.defaultProps = {
-  className: '',
-};
 
 export default FhiHeader;

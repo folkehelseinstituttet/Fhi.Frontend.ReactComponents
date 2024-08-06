@@ -1,3 +1,10 @@
+## 5.0.0
+
+> Aug 06, 2024
+
+* :boom: **Breaking** updated to `@folkehelseinstituttet/style` v6 [Changelog](https://github.com/folkehelseinstituttet/Fhi.Frontend.Style/blob/main/CHANGELOG.md#600)
+* :boom: **Breaking** Replaced 'defaultProps' with Javascript default parameters
+
 ## 4.2.1
 
 > Oct 26, 2023

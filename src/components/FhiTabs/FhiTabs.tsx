@@ -10,7 +10,7 @@ type FhiTabsProps = {
   className?: string,
 };
 
-const FhiTabs:FC<FhiTabsProps> = ({ links, className }) => (
+const FhiTabs:FC<FhiTabsProps> = ({ links, className = 'mb-7' }) => (
   <Nav variant="tabs" className={className}>
     {links.map((link) => (
       <Nav.Item key={link.path}>
@@ -21,9 +21,5 @@ const FhiTabs:FC<FhiTabsProps> = ({ links, className }) => (
     ))}
   </Nav>
 );
-
-FhiTabs.defaultProps = {
-  className: 'mb-7', // Setting margin bottom 7 as default making it easy to override if nessesary
-};
 
 export default FhiTabs;

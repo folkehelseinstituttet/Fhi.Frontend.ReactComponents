@@ -15,17 +15,17 @@ type Props = {
 };
 
 const FhiButton: FC<Props> = ({
-  className,
+  className = '',
   children,
-  onClick,
-  disabled,
-  type,
-  size,
-  secondary,
-  outline,
-  flat,
-  icon,
-  spinner,
+  onClick = () => {},
+  disabled = false,
+  type = 'button',
+  size = undefined,
+  secondary = false,
+  outline = false,
+  flat = false,
+  icon = false,
+  spinner = false,
 }) => {
   let btnClass = `${className} btn`;
   if (size === 'small') {
@@ -52,22 +52,10 @@ const FhiButton: FC<Props> = ({
     // eslint-disable-next-line react/button-has-type
     <button type={type} className={btnClass} onClick={onClick} disabled={disabled}>
       {spinner && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />}
+      {spinner && '\u00A0\u00A0'/* Legger til litt luft mellom spinner og tekst */}
       {children}
     </button>
   );
-};
-
-FhiButton.defaultProps = {
-  size: undefined,
-  secondary: false,
-  outline: false,
-  className: '',
-  disabled: false,
-  flat: false,
-  icon: false,
-  spinner: false,
-  type: 'button',
-  onClick: () => {},
 };
 
 export default FhiButton;

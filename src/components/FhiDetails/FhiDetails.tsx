@@ -21,7 +21,7 @@ const DetailsTitle = styled.span`
   font-weight: bold;
 `;
 
-const FhiDetails:FC<FhiDetailsProps> = ({ items, className }) => (
+const FhiDetails:FC<FhiDetailsProps> = ({ items, className = '' }) => (
   <DetailsContainer className={className}>
     {items.map((item) => (
       <Fragment key={item.title}>
@@ -31,9 +31,5 @@ const FhiDetails:FC<FhiDetailsProps> = ({ items, className }) => (
     ))}
   </DetailsContainer>
 );
-
-FhiDetails.defaultProps = {
-  className: '',
-};
 
 export default FhiDetails;
