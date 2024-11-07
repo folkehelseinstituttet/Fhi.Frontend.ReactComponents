@@ -1,6 +1,6 @@
 ## 6.0.0
 
-> Aug 06, 2024
+> Nov 07, 2024
 
 * :boom: **Breaking** updated peerDependencies `styled-components` to v6, 
 * :tada: **Enhancement** Updated packages
