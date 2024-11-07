@@ -1,6 +1,6 @@
 {
   "name": "@folkehelseinstituttet/react-components",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Frontend components made with react for use in FHI",
   "repository": {
     "type": "git",
