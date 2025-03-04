@@ -16,6 +16,7 @@ exports[`FhiHeader snapshot test 1`] = `
         >
           <a
             class="fhi-header__logo"
+            data-discover="true"
             href="/"
           >
             <i
@@ -50,6 +51,7 @@ exports[`FhiHeader snapshot test 1`] = `
         >
           <a
             class="fhi-main-menu__home-link"
+            data-discover="true"
             href="/"
           >
             <i
@@ -90,6 +92,7 @@ exports[`FhiHeader snapshot test 1`] = `
               >
                 <a
                   class="nav-link fhi-main-menu__nav-link"
+                  data-discover="true"
                   href="/rl"
                 >
                   Dette er en tittel

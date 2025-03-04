@@ -10,6 +10,7 @@ exports[`FhiTabs snapshot test 1`] = `
     >
       <a
         class="nav-link"
+        data-discover="true"
         href="/1"
       >
         Fane nummer 1
@@ -20,6 +21,7 @@ exports[`FhiTabs snapshot test 1`] = `
     >
       <a
         class="nav-link"
+        data-discover="true"
         href="/2"
       >
         Fane nummer 2

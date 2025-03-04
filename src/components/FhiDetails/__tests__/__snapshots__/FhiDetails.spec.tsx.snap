@@ -3,10 +3,10 @@
 exports[`FhiDetails snapshot test 1`] = `
 <div>
   <div
-    class="FhiDetails__DetailsContainer-sc-1qzqcal-0 jbOaKH test"
+    class="FhiDetails__DetailsContainer-sc-1qzqcal-0 cronbZ test"
   >
     <span
-      class="FhiDetails__DetailsTitle-sc-1qzqcal-1 bMTYVi"
+      class="FhiDetails__DetailsTitle-sc-1qzqcal-1 kMgnFw"
     >
       Dette er en tittel
     </span>

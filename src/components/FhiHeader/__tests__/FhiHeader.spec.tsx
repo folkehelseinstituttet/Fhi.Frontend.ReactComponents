@@ -6,13 +6,7 @@ import Header from '../FhiHeader';
 describe('FhiHeader', () => {
   test('snapshot test', () => {
     const { container } = render(
-      <MemoryRouter
-        initialEntries={['/']}
-        future={{
-          v7_relativeSplatPath: true,
-          v7_startTransition: true,
-        }}
-      >
+      <MemoryRouter initialEntries={['/']}>
         <Header
           className="test"
           projectName="Testproject"
@@ -23,7 +17,7 @@ describe('FhiHeader', () => {
             },
           ]}
         />
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     expect(container).toMatchSnapshot();
   });
