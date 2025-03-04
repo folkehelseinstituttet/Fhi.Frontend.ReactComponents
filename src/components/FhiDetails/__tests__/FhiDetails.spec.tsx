@@ -1,9 +1,10 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Details from '../FhiDetails';
 
 describe('FhiDetails', () => {
   test('snapshot test', () => {
-    const details = renderer.create(
+    const { container } = render(
       <Details
         className="test"
         items={[
@@ -14,7 +15,6 @@ describe('FhiDetails', () => {
         ]}
       />,
     );
-    const tree = details.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

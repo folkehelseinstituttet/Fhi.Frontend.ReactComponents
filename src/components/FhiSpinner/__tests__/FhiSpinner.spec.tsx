@@ -1,10 +1,10 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Spinner from '../FhiSpinner';
 
 describe('FhiSpinner', () => {
   test('snapshot test', () => {
-    const spinner = renderer.create(<Spinner />);
-    const tree = spinner.toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<Spinner />);
+    expect(container).toMatchSnapshot();
   });
 });

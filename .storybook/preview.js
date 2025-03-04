@@ -1,6 +1,7 @@
 import '@folkehelseinstituttet/style/import/_all.scss';
 import { ThemeProvider } from "styled-components";
 import { MemoryRouter } from "react-router";
+import { fn } from '@storybook/test';
 
 export const decorators = [
   (Story) => (
@@ -16,7 +17,7 @@ export const decorators = [
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  args: { onClick: fn() },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -24,3 +25,4 @@ export const parameters = {
     },
   },
 }
+export const tags = ['autodocs'];

@@ -1,11 +1,18 @@
 import { MemoryRouter } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Header from '../FhiHeader';
 
 describe('FhiHeader', () => {
   test('snapshot test', () => {
-    const header = renderer.create(
-      <MemoryRouter initialEntries={['/']}>
+    const { container } = render(
+      <MemoryRouter
+        initialEntries={['/']}
+        future={{
+          v7_relativeSplatPath: true,
+          v7_startTransition: true,
+        }}
+      >
         <Header
           className="test"
           projectName="Testproject"
@@ -18,7 +25,6 @@ describe('FhiHeader', () => {
         />
       </MemoryRouter>,
     );
-    const tree = header.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

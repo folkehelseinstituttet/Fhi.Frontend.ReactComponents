@@ -1,35 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiTabs snapshot test 1`] = `
-<div
-  className="mb-7 nav nav-tabs"
-  onKeyDown={[Function]}
->
+<div>
   <div
-    className="nav-item"
+    class="mb-7 nav nav-tabs"
   >
-    <a
-      className="nav-link"
-      data-rr-ui-event-key={null}
-      disabled={false}
-      href="/1"
-      onClick={[Function]}
+    <div
+      class="nav-item"
     >
-      Fane nummer 1
-    </a>
-  </div>
-  <div
-    className="nav-item"
-  >
-    <a
-      className="nav-link"
-      data-rr-ui-event-key={null}
-      disabled={false}
-      href="/2"
-      onClick={[Function]}
+      <a
+        class="nav-link"
+        href="/1"
+      >
+        Fane nummer 1
+      </a>
+    </div>
+    <div
+      class="nav-item"
     >
-      Fane nummer 2
-    </a>
+      <a
+        class="nav-link"
+        href="/2"
+      >
+        Fane nummer 2
+      </a>
+    </div>
   </div>
 </div>
 `;
