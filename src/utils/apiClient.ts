@@ -4,7 +4,6 @@ const defaultOptions: RequestInit = {
   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
   credentials: 'include', // include, *same-origin, omit
   redirect: 'follow', // manual, *follow, error
-  // eslint-disable-next-line max-len
   referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
 };
 

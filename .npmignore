@@ -1,6 +1,6 @@
 # Dot files
 .gitignore
-.eslintrc
+eslint.config.mjs
 
 package.json
 

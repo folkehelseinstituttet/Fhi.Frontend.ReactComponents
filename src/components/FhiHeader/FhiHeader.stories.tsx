@@ -1,6 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/jsx-props-no-spreading */
-
 import type { Meta, StoryObj } from '@storybook/react';
 import FhiHeader from './FhiHeader';
 

@@ -1,6 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/jsx-props-no-spreading */
-
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import styled from 'styled-components';
 import FhiToast from './FhiToast';

@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable react/jsx-no-constructed-context-values */
 import React, {
   FC,
   useState,

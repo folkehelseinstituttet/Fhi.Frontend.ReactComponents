@@ -78,8 +78,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "eslint": "^9.21.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -101,6 +99,7 @@
     "style-loader": "^4.0.0",
     "styled-components": "^6.1.15",
     "ts-node": "^10.9.2",
-    "tslib": "^2.8.1"
+    "tslib": "^2.8.1",
+    "util": "^0.12.5"
   }
 }
