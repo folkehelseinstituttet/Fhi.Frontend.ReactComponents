@@ -3,7 +3,7 @@
 > March 10, 2025
 
 * :boom: **Breaking** upgrades to React v19
-* :boom: **Breaking** removes, @storybook/testing-library, not compatible with React v19. Replaces it with @testing-library/react instead
+* :boom: **Breaking** removes, @react-test-renderer, not compatible with React v19. Replaces it with @testing-library/react instead
 
 * :boom: **Breaking** removes @eslint-config-airbnb
         and @eslint-config-airbnb-typescript, not compatible with eslint v9
