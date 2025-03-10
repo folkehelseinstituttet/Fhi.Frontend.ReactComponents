@@ -3,7 +3,7 @@
 		// enable strict null checks as a best practice
 		"strictNullChecks": true,
 		// Search under node_modules for non-relative imports.
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		// Process & infer types from .js files.
 		"allowJs": true,
 		// Don't emit; allow Babel to transform files.
@@ -24,7 +24,10 @@
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"module": "NodeNext",
+		// Make types globally available during build. 
+		"types": ["react", "@types/styled-components"],
 	},
 	"parserOptions": {
         "createDefaultProgram": true
