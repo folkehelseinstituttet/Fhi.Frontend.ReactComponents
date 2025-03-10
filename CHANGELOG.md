@@ -1,6 +1,6 @@
 ## 7.0.0
 
-> March 10, 2025
+> Mar 10, 2025
 
 * :boom: **Breaking** upgrades to React v19
 * :boom: **Breaking** removes, @react-test-renderer, not compatible with React v19. Replaces it with @testing-library/react instead
