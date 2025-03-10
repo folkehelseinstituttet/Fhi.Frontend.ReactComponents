@@ -36,7 +36,6 @@ export default [
         rules: {
             "react/function-component-definition": ["error", {
                 namedComponents: "arrow-function",
-                unnamedComponents: "arrow-function",
             }],
             "no-restricted-exports": 0,
             "linebreak-style": 0,
