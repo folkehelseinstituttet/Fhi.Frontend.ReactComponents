@@ -28,4 +28,4 @@ jobs:
         run: npx tsc --traceResolution > trace.log && cat trace.log
         
       - name: Run prepack
-         npm run prepack
+        run: npm run prepack
