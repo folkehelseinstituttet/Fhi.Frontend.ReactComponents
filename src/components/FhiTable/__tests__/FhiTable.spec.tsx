@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import Table from '../FhiTable';
 import { TableStructure } from '../FhiTable.model';
 

@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
 import Accordion from '../FhiAccordion';
-import '@testing-library/jest-dom';
 
 const DefaultHeader = () => <h4>Dette er en ustylet overskrift</h4>;
 const DefaultContent = () => <div><span>Dette er ustylet innhold</span></div>;
