@@ -6,8 +6,6 @@
 		"noEmit": false,
 		"isolatedModules": true,
 		"outDir": "dist/",
-		"jsx": "react-jsx",
-		"types": ["react", "styled-components"],
 	},
 	"include": [
 		"src"
