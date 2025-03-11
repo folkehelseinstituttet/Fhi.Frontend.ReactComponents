@@ -27,7 +27,7 @@
 		"resolveJsonModule": true,
 		"module": "NodeNext",
 		// Make types globally available during build. 
-		"types": ["react"],
+		"types": ["react", "@types/jest"],
 		// skipLibCheck is needed to ingore typechecking for third parties to solve styled-components issue.
 		// build:types will fail with error: node_modules/styled-components/dist/hoc/withTheme.d.ts:3:128 - error TS2503: Cannot find namespace 'JSX'.
 		// Can be removed when styled-components has a fix for it. 
