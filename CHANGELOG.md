@@ -8,7 +8,7 @@
 * :boom: **Breaking** removes @eslint-config-airbnb
         and @eslint-config-airbnb-typescript, not compatible with eslint v9
 
-* :boom **Breaking** removes deprecated FHiTabBar
+* :boom: **Breaking** removes deprecated FHiTabBar
 
 * :tada: **Enhancement** Updated storybook to v8.6.3
 * :tada: **Enhancement** Updates outdated packages
