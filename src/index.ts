@@ -12,8 +12,3 @@ export { default as FhiSelect } from './components/FhiSelect';
 // Utilities
 export { default as apiClient } from './utils/apiClient';
 export { default as useApi } from './utils/useApi';
-
-/**
- * @deprecated FHITabBar has been renamed to FhiTabs
- */
-export { default as FhiTabBar } from './components/FhiTabs';

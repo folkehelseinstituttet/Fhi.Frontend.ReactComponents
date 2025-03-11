@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Accordion from '../FhiAccordion';
 
 const DefaultHeader = () => <h4>Dette er en ustylet overskrift</h4>;
@@ -22,13 +22,12 @@ const defaultArgs = {
 
 describe('FhiAccordion', () => {
   test('snapshot test', () => {
-    const accordion = renderer.create(
+    const { container } = render(
       <Accordion
         className="test"
         items={defaultArgs.items}
       />,
     );
-    const tree = accordion.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -43,11 +43,9 @@ const FhiTable: FC<Props> = ({
             <tr
               key={d.key}
               aria-selected={!!d.selected}
-              // eslint-disable-next-line react/jsx-props-no-spreading
               {...clickProps}
             >
               {d.data.map((v, i) => (
-                // eslint-disable-next-line react/no-array-index-key
                 <td key={i}>{v}</td>
               ))}
             </tr>

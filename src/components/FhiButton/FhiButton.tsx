@@ -49,7 +49,6 @@ const FhiButton: FC<Props> = ({
   }
 
   return (
-    // eslint-disable-next-line react/button-has-type
     <button type={type} className={btnClass} onClick={onClick} disabled={disabled}>
       {spinner && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />}
       {spinner && '\u00A0\u00A0'/* Legger til litt luft mellom spinner og tekst */}

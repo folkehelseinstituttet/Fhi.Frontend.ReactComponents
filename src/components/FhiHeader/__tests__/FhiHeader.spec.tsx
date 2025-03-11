@@ -1,10 +1,10 @@
 import { MemoryRouter } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Header from '../FhiHeader';
 
 describe('FhiHeader', () => {
   test('snapshot test', () => {
-    const header = renderer.create(
+    const { container } = render(
       <MemoryRouter initialEntries={['/']}>
         <Header
           className="test"
@@ -16,9 +16,8 @@ describe('FhiHeader', () => {
             },
           ]}
         />
-      </MemoryRouter>,
+      </MemoryRouter>
     );
-    const tree = header.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

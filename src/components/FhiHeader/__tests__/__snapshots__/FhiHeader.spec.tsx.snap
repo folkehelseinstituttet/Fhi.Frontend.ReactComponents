@@ -1,107 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiHeader snapshot test 1`] = `
-<header
-  className="fhi-header test"
->
-  <div
-    className="fhi-header__brand"
+<div>
+  <header
+    class="fhi-header test"
   >
     <div
-      className="container fhi-header__brand-container"
+      class="fhi-header__brand"
     >
       <div
-        className="fhi-header__brand-content"
+        class="container fhi-header__brand-container"
       >
-        <a
-          className="fhi-header__logo"
-          href="/"
-          onClick={[Function]}
-        >
-          <i
-            className="icon-fhi-logo fhi-header__logo-icon"
-          />
-          <span
-            className="visually-hidden"
-          >
-            Testproject
-          </span>
-        </a>
         <div
-          className="fhi-header__project"
+          class="fhi-header__brand-content"
         >
-          <span
-            className="fhi-header__project-name"
+          <a
+            class="fhi-header__logo"
+            data-discover="true"
+            href="/"
           >
-            Testproject
-          </span>
+            <i
+              class="icon-fhi-logo fhi-header__logo-icon"
+            />
+            <span
+              class="visually-hidden"
+            >
+              Testproject
+            </span>
+          </a>
+          <div
+            class="fhi-header__project"
+          >
+            <span
+              class="fhi-header__project-name"
+            >
+              Testproject
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="container fhi-header__main-menu-container"
-  >
-    <nav
-      className="fhi-main-menu "
+    <div
+      class="container fhi-header__main-menu-container"
     >
-      <div
-        className="container fhi-main-menu__container"
+      <nav
+        class="fhi-main-menu "
       >
-        <a
-          className="fhi-main-menu__home-link"
-          href="/"
-          onClick={[Function]}
-        >
-          <i
-            className="icon-fhi-logo fhi-header__logo-icon fhi-main-menu__logo-icon"
-          />
-          <span
-            className="visually-hidden"
-          >
-            FHI Produktnavn
-          </span>
-        </a>
-        <button
-          aria-controls="fhi-main-menu"
-          aria-expanded={false}
-          className="fhi-main-menu__toggler"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="icon-xmark fhi-main-menu__toggler-close-icon"
-          />
-          <i
-            className="icon-list fhi-main-menu__toggler-menu-icon"
-          />
-          <span
-            className="fhi-main-menu__toggler-text"
-          >
-            Meny
-          </span>
-        </button>
         <div
-          className="collapse fhi-main-menu__collapse "
+          class="container fhi-main-menu__container"
         >
-          <ul
-            className="nav nav-tabs fhi-nav-tabs fhi-main-menu__nav"
+          <a
+            class="fhi-main-menu__home-link"
+            data-discover="true"
+            href="/"
           >
-            <li
-              className="fhi-main-menu__nav-item"
+            <i
+              class="icon-fhi-logo fhi-header__logo-icon fhi-main-menu__logo-icon"
+            />
+            <span
+              class="visually-hidden"
             >
-              <a
-                className="nav-link fhi-main-menu__nav-link"
-                href="/rl"
-                onClick={[Function]}
+              FHI Produktnavn
+            </span>
+          </a>
+          <button
+            aria-controls="fhi-main-menu"
+            aria-expanded="false"
+            class="fhi-main-menu__toggler"
+            type="button"
+          >
+            <i
+              class="icon-xmark fhi-main-menu__toggler-close-icon"
+            />
+            <i
+              class="icon-list fhi-main-menu__toggler-menu-icon"
+            />
+            <span
+              class="fhi-main-menu__toggler-text"
+            >
+              Meny
+            </span>
+          </button>
+          <div
+            class="collapse fhi-main-menu__collapse "
+          >
+            <ul
+              class="nav nav-tabs fhi-nav-tabs fhi-main-menu__nav"
+            >
+              <li
+                class="fhi-main-menu__nav-item"
               >
-                Dette er en tittel
-              </a>
-            </li>
-          </ul>
+                <a
+                  class="nav-link fhi-main-menu__nav-link"
+                  data-discover="true"
+                  href="/rl"
+                >
+                  Dette er en tittel
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </div>
-</header>
+      </nav>
+    </div>
+  </header>
+</div>
 `;

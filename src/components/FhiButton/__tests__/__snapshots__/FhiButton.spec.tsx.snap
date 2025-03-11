@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiButton snapshot test 1`] = `
-<button
-  className=" btn fhi-btn-primary"
-  disabled={false}
-  onClick={[Function]}
-  type="button"
->
-  test
-</button>
+<div>
+  <button
+    class=" btn fhi-btn-primary"
+    type="button"
+  >
+    test
+  </button>
+</div>
 `;

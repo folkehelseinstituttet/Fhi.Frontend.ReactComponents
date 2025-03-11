@@ -1,3 +1,15 @@
+## 7.0.0
+
+> Mar 10, 2025
+
+* :boom: **Breaking** upgrades to React v19
+* :boom: **Breaking** removes, @react-test-renderer, not compatible with React v19. Replaces it with @testing-library/react instead
+* :boom: **Breaking** removes @eslint-config-airbnb
+        and @eslint-config-airbnb-typescript, not compatible with eslint v9
+* :boom: **Breaking** removes deprecated FHiTabBar
+* :tada: **Enhancement** Updated storybook to v8.6.3
+* :tada: **Enhancement** Updates outdated packages
+
 ## 6.0.0
 
 > Nov 07, 2024

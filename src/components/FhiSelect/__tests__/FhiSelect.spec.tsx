@@ -1,9 +1,9 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Select from '../FhiSelect';
 
 describe('FhiSelect', () => {
   test('snapshot test', () => {
-    const select = renderer.create(
+    const { container } = render(
       <Select
         id="selectId"
         label="Select"
@@ -18,7 +18,6 @@ describe('FhiSelect', () => {
         ]}
       />,
     );
-    const tree = select.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

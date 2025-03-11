@@ -1,48 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiDetails snapshot test 1`] = `
-<div
-  className="test table-responsive"
->
-  <table
-    className="table  table-striped "
+<div>
+  <div
+    class="test table-responsive"
   >
-    <thead>
-      <tr>
-        <th
-          scope="col"
+    <table
+      class="table  table-striped "
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Header1
+          </th>
+          <th
+            scope="col"
+          >
+            Header2
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          aria-selected="false"
         >
-          Header1
-        </th>
-        <th
-          scope="col"
+          <td>
+            Testdata11
+          </td>
+          <td>
+            Testdata12
+          </td>
+        </tr>
+        <tr
+          aria-selected="false"
         >
-          Header2
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        aria-selected={false}
-      >
-        <td>
-          Testdata11
-        </td>
-        <td>
-          Testdata12
-        </td>
-      </tr>
-      <tr
-        aria-selected={false}
-      >
-        <td>
-          Testdata21
-        </td>
-        <td>
-          Testdata22
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <td>
+            Testdata21
+          </td>
+          <td>
+            Testdata22
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;

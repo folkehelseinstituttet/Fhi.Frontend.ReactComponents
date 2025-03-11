@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiSpinner snapshot test 1`] = `
-<div
-  className="spinner-border  "
-  role="status"
->
-  <span
-    className="visually-hidden"
+<div>
+  <div
+    class="spinner-border  "
+    role="status"
   >
-    Loading...
-  </span>
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
 </div>
 `;

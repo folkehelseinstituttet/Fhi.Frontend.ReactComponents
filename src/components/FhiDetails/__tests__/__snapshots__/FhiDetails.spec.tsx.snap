@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FhiDetails snapshot test 1`] = `
-<div
-  className="FhiDetails__DetailsContainer-sc-1qzqcal-0 jbOaKH test"
->
-  <span
-    className="FhiDetails__DetailsTitle-sc-1qzqcal-1 bMTYVi"
+<div>
+  <div
+    class="FhiDetails__DetailsContainer-sc-1qzqcal-0 cronbZ test"
   >
-    Dette er en tittel
-  </span>
-  <span>
-    Dette er beskrivelse
-  </span>
+    <span
+      class="FhiDetails__DetailsTitle-sc-1qzqcal-1 kMgnFw"
+    >
+      Dette er en tittel
+    </span>
+    <span>
+      Dette er beskrivelse
+    </span>
+  </div>
 </div>
 `;

@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Table from '../FhiTable';
 import { TableStructure } from '../FhiTable.model';
 
@@ -16,14 +16,13 @@ const testData: TableStructure[] = [
 
 describe('FhiDetails', () => {
   test('snapshot test', () => {
-    const table = renderer.create(
+    const { container } = render(
       <Table
         className="test"
         data={testData}
         headers={testHeaders}
       />,
     );
-    const tree = table.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
