@@ -27,7 +27,7 @@
 		"resolveJsonModule": true,
 		"module": "NodeNext",
 		// Make types globally available during build. 
-		"types": ["react", "@types/styled-components"],
+		"types": ["react", "styled-components"],
 	},
 	"parserOptions": {
         "createDefaultProgram": true

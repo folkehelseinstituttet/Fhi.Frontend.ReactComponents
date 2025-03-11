@@ -7,7 +7,7 @@
 		"isolatedModules": true,
 		"outDir": "dist/",
 		"jsx": "react-jsx",
-		"types": ["react", "@types/styled-components"],
+		"types": ["react", "styled-components"],
 	},
 	"include": [
 		"src"
