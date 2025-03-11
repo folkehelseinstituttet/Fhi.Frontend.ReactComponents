@@ -25,7 +25,7 @@ jobs:
         run: ls -l node_modules/@types
 
       - name: Debug TypeScript module resolution
-        run: npx tsc --traceResolution > trace.log && cat trace.log
+        run: npx tsc --traceResolution
         
       - name: Run prepack
         run: npm run prepack
